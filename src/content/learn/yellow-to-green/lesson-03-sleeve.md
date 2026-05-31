@@ -33,6 +33,13 @@ Study same-side sleeve-grab entries as a family, then use the technique pages to
 - Centerline stepping with relaxed arms.
 - Slow hand-capture patterns without joint pressure.
 
+## Lesson flow
+
+1. Review Outside Sleeve movement and safety before changing grip orientation.
+2. Introduce Sleeve 1-2, Sleeve 3, Sleeve 4, and Sleeve 5-6 as a comparison set.
+3. Drill the entry and control point for each reference without rushing the finish.
+4. Close by naming the posture-breaking detail that makes each page distinct.
+
 ## Technique links
 
 - [Sleeve 1-2](/techniques/sleeve-1-2/)
@@ -57,3 +64,7 @@ Same-side sleeve locks can load the wrist before posture is broken. Build pressu
 - Which mechanics are shared across Sleeve 1-2, 3, 4, and 5-6?
 - What makes uke's posture change before the finish?
 - How can nage practice the entry solo without pretending to learn the lock solo?
+
+## Next lesson
+
+Continue to the [Yellow to Green Review](/learn/yellow-to-green/review/) to organize the sleeve-grab material by family, principle, and safety risk.

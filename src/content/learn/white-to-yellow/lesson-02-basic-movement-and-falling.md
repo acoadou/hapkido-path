@@ -28,6 +28,13 @@ Practice basic movement paths and falling preparation before combining speed, gr
 - Low level changes and technical stand-ups.
 - Rocking motions on the back with the chin tucked.
 
+## Lesson flow
+
+1. Review the safety agreements from Lesson 1.
+2. Practice basic stance changes, level changes, and controlled kneeling transitions.
+3. Introduce the forward-roll path from a low start.
+4. Compare solo movement quality with the [Forward Roll](/techniques/forward-roll/) reference page.
+
 ## Technique links
 
 - [Forward Roll](/techniques/forward-roll/)
@@ -49,3 +56,7 @@ Keep the head off the mat, start low, and stop before fatigue causes flat or cro
 - Where should the head be during the roll?
 - Why does the roll travel from shoulder to opposite hip?
 - What signs mean the height or speed should be reduced?
+
+## Next lesson
+
+Continue to [Lesson 3 — First Grabs or Breakaways](/learn/white-to-yellow/lesson-03-first-grabs-or-breakaways/) to apply relaxed movement around a cooperative grip.

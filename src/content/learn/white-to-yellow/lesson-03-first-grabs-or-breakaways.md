@@ -29,6 +29,13 @@ Use a cooperative grip to study position, direction, centerline connection, and 
 - Slow stepping while keeping the spine tall.
 - Relax-and-reset drills for the arms.
 
+## Lesson flow
+
+1. Review stance, centerline, and relaxed arm position.
+2. Practice the straight-hand path solo before adding contact.
+3. Add a light cooperative grip and move around the pressure without pulling.
+4. Finish by checking the [Straight Hand 1](/techniques/straight-hand-1/) reference for key details.
+
 ## Technique links
 
 - [Straight Hand 1](/techniques/straight-hand-1/)
@@ -50,3 +57,7 @@ Do not yank against the grip or lock the elbow. Move slowly enough that both par
 - What changes when the shoulder rises?
 - How does centerline support the arm?
 - Why should the first grip drills stay cooperative?
+
+## Next lesson
+
+Continue to the [White to Yellow Review](/learn/white-to-yellow/review/) before moving into the Yellow to Green sleeve-grab lessons.

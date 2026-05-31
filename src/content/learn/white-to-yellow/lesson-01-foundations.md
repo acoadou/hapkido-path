@@ -27,6 +27,13 @@ Establish safe study habits before technique details: bow in, communicate clearl
 - Easy stance changes with calm breathing.
 - Low squats or kneeling transitions only as comfortable.
 
+## Lesson flow
+
+1. Open with bow-in, space checks, and expectations for slow cooperative practice.
+2. Walk through stance, attention, and relaxed reset habits.
+3. Rehearse tapping, verbal stops, and partner communication without applying techniques.
+4. Close by showing where the next lessons and reference pages live on the site.
+
 ## Technique links
 
 No technique page is required for this orientation lesson yet. Use the next lesson for the first falling reference.
@@ -48,3 +55,7 @@ Separate learning from resistance. If either partner is confused, tense, or feel
 - What should you check before partner practice?
 - When should uke tap, step, or speak?
 - What is the difference between reviewing a sequence and applying force?
+
+## Next lesson
+
+Continue to [Lesson 2 — Basic Movement and Falling](/learn/white-to-yellow/lesson-02-basic-movement-and-falling/) for footwork, posture, and the first forward-roll reference.

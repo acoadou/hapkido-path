@@ -72,14 +72,14 @@ const groups: VisualGroup[] = visuals?.groups?.length
             const alt = frame.alt ?? frame.caption;
             return (
               <figure class="visual-card">
-                <figcaption class="visual-card__label">Frame {index + 1}</figcaption>
+                <figcaption class="visual-card__label"><span>Frame</span> {index + 1}</figcaption>
                 <div class="visual-card__media">
                   {hasImage ? (
                     <img src={src} alt={alt} loading="lazy" decoding="async" />
                   ) : (
                     <div class="visual-card__placeholder" role="note" aria-label={`Illustration pending for ${frame.file}`}>
                       <div class="visual-card__placeholder-box" aria-hidden="true">
-                        <span>Image pending</span>
+                        <span>Placeholder box</span>
                       </div>
                       <span class="visual-card__filename"><strong>Expected filename</strong>{frame.file}</span>
                     </div>
@@ -127,11 +127,18 @@ const groups: VisualGroup[] = visuals?.groups?.length
   }
 
   .visual-card__label {
+    align-items: baseline;
     color: var(--color-accent);
-    font-size: 0.78rem;
+    display: flex;
+    font-size: 1.15rem;
     font-weight: 800;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.02em;
     padding: 0.85rem 1rem 0;
+  }
+
+  .visual-card__label span {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
   }
 

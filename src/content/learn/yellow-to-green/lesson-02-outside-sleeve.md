@@ -32,6 +32,13 @@ Study how the outside sleeve family changes the angle of the grabbing hand, capt
 - Step-pivot patterns around an imagined grip.
 - Cooperative sleeve holds with quick verbal safety checks.
 
+## Lesson flow
+
+1. Review the sleeve-grab safety checks from Lesson 1.
+2. Compare the entry shape for Outside Sleeve 1, 2, and 3.
+3. Drill one technique at a time with pauses at hand capture and posture change.
+4. Finish by identifying which principle each technique emphasizes most clearly.
+
 ## Technique links
 
 - [Outside Sleeve 1](/techniques/outside-sleeve-1/)
@@ -55,3 +62,7 @@ Do not crank the wrist. Uke should be able to move, tap, or speak before pressur
 - What makes Outside Sleeve 1 different from the later outside sleeve references?
 - Where should the captured hand be relative to nage's center?
 - How does body drop differ from pulling down with the arms?
+
+## Next lesson
+
+Continue to [Lesson 3 — Sleeve](/learn/yellow-to-green/lesson-03-sleeve/) for the same-side sleeve-grab family.
