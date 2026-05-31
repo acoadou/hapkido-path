@@ -49,7 +49,3 @@ Start low, make a round path from shoulder to opposite hip, and stand only when 
 - Rolling over the neck.
 - Slapping the mat too late.
 - Standing before balance returns.
-
-## Safety notes
-
-Learn with mats, supervision, and low height before adding speed.

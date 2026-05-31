@@ -1,9 +1,43 @@
 ---
-import { withBase } from '@utils/paths';
-import { hrefForReference, labelFromReference, type ReferenceKind } from '@utils/references';
+import { getCollection } from 'astro:content';
+import { withBase, cleanContentId } from '@utils/paths';
+import { cleanReferencePath, hrefForReference, labelFromReference, slugifyLabel, type ReferenceKind } from '@utils/references';
+
 interface Props { value: string; kind?: ReferenceKind; label?: string; }
 const { value, kind = 'generic', label } = Astro.props;
 const href = hrefForReference(value, kind);
-const text = label ?? labelFromReference(value);
+
+const collectionByKind: Partial<Record<ReferenceKind, 'techniques' | 'principles' | 'learn'>> = {
+  technique: 'techniques',
+  principle: 'principles',
+  learn: 'learn'
+};
+
+function slugFromReference(reference: string, referenceKind: ReferenceKind) {
+  const clean = cleanReferencePath(reference).split('#')[0].split('?')[0].replace(/^\/+|\/+$/g, '');
+  if (!clean || /^https?:\/\//.test(clean)) return '';
+  const collection = collectionByKind[referenceKind];
+  const sectionPrefix = collection ? `${collection}/` : '';
+  const withoutSection = sectionPrefix && clean.startsWith(sectionPrefix) ? clean.slice(sectionPrefix.length) : clean;
+  const normalized = withoutSection.replace(/^\/+|\/+$/g, '');
+  return normalized.includes('/') ? normalized : slugifyLabel(normalized);
+}
+
+async function titleForReference(reference: string, referenceKind: ReferenceKind) {
+  const collection = collectionByKind[referenceKind];
+  const slug = slugFromReference(reference, referenceKind);
+  if (!collection || !slug) return undefined;
+
+  const entries = await getCollection(collection);
+  const entry = entries.find((item) => {
+    const id = cleanContentId(item.id);
+    const titleSlug = slugifyLabel(item.data.title);
+    return id === slug || titleSlug === slug;
+  });
+
+  return entry?.data.title;
+}
+
+const text = label ?? await titleForReference(value, kind) ?? labelFromReference(value);
 ---
 {href ? <a href={href.startsWith('http') ? href : withBase(href)}>{text}</a> : <span>{text}</span>}

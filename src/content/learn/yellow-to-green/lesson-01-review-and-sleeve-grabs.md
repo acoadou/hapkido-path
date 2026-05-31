@@ -13,12 +13,40 @@ principles:
   - relaxation-under-grip
 estimated_time: 30-45 minutes
 ---
+## Goal
 
-## Purpose
+Review relaxed beginner movement and introduce sleeve-grab study conditions without pulling against strength.
 
-Review how to stay relaxed while grabbed and how to move around the grip instead of pulling straight back.
+## Prerequisites
 
-## Study links
+- Forward roll and basic falling awareness.
+- Straight-hand structure review.
+- Clear agreement on grip intensity and tapping.
+
+## Warm-up
+
+- Wrist, elbow, and shoulder mobility.
+- Slow circles with relaxed arms.
+- Light grip-and-release checks with a partner.
+
+## Technique links
 
 - [Outside Sleeve 1](/techniques/outside-sleeve-1/)
-- [Circular Motion](/principles/circular-motion/)
+
+## Solo review
+
+Practice circular arm paths while stepping. Keep the hand connected to the center and avoid shrugging or leaning away from the imagined grip.
+
+## Partner drill
+
+Uke holds the sleeve lightly. Nage breathes, relaxes the shoulder, starts a slow circular path, and stops before applying lock pressure. Repeat until the entry feels calm.
+
+## Safety focus
+
+Sleeve grabs can quickly become wrist, elbow, or shoulder pressure. Increase force only after both partners understand the direction.
+
+## Review questions
+
+- What does relaxation under grip mean without collapsing?
+- Why is pulling straight back usually weak?
+- What should uke do when pressure becomes unclear?
