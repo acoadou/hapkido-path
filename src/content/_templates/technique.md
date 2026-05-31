@@ -28,7 +28,8 @@ status: draft
 ## Names and references
 
 - School name: Outside Sleeve 1
-- Tedeschi / Hapkido reference: TODO
+- Tedeschi reference name (`tedeschi_reference_name`): TODO — leave blank until verified
+- Tedeschi reference page (`tedeschi_reference_page`): TODO — leave blank until verified
 - Alternate names: TODO
 - Source notes: Based on Anthony's school terminology and study notes.
 

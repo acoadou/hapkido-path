@@ -10,7 +10,7 @@ import { contentHref, withBase } from '@utils/paths';
 const levels = (await getCollection('learn')).filter((entry) => entry.data.type === 'belt-overview').sort((a, b) => a.data.order - b.data.order);
 ---
 <BaseLayout title="The Hapkido Path">
-  <Hero title="Hapkido Path" subtitle="A structured Hapkido study path for learning, reviewing, and organizing techniques." primaryHref={withBase('/learn/')} primaryLabel="Start Learning" secondaryHref={withBase('/techniques/')} secondaryLabel="Browse Techniques" />
+  <Hero title="Hapkido Path" subtitle="A structured Hapkido study path for learning, reviewing, and organizing techniques." primaryHref={withBase('/curriculum/')} primaryLabel="View Curriculum" secondaryHref={withBase('/practice/')} secondaryLabel="Practice Tools" />
   <section class="section-tight"><div class="container">
     <p class="lead">This site combines a beginner learning path organized by belt-like levels, a detailed technique atlas, practical principles, practice tools, Korean vocabulary notes, and source references.</p>
     <p class="callout">The current scope covers White to Yellow and Yellow to Green only.</p>

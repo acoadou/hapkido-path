@@ -1,15 +1,12 @@
 ---
 import { withBase } from '@utils/paths';
-const nav = [
-  ['Curriculum', '/curriculum/'], ['Learn', '/learn/'], ['Techniques', '/techniques/'], ['Principles', '/principles/'],
-  ['Practice', '/practice/'], ['Korean', '/korean/'], ['Sources', '/sources/'], ['About', '/about/']
-];
+import { mainNavigation } from '../data/navigation';
 ---
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href={withBase('/')}>The Hapkido Path</a>
     <nav aria-label="Main navigation">
-      {nav.map(([label, href]) => <a href={withBase(href)}>{label}</a>)}
+      {mainNavigation.map((item) => <a href={withBase(item.href)}>{item.label}</a>)}
     </nav>
   </div>
 </header>

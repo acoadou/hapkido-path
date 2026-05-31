@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
-import Tag from '@components/Tag.astro';
+import ReferenceList from '@components/ReferenceList.astro';
 interface Props { entry: any; }
 const { entry } = Astro.props;
 const related = entry.data.related_techniques ?? entry.data.relatedTechniques ?? [];
@@ -17,7 +17,7 @@ const related = entry.data.related_techniques ?? entry.data.relatedTechniques ??
         <article class="content-panel"><slot /></article>
         <aside class="card">
           <h2>Related techniques</h2>
-          <div class="tags">{related.map((technique) => <Tag label={technique} />)}</div>
+          <ReferenceList items={related} kind="technique" />
         </aside>
       </div>
     </div>

@@ -6,7 +6,10 @@ export function withBase(path: string) {
 }
 
 export function cleanContentId(id: string) {
-  return id.replace(/\.mdx?$/, '').replace(/\/index$/, '');
+  return id
+    .replace(/\.mdx?(?=\/|#|$)/g, '')
+    .replace(/\/index(?=\/|#|$)/g, '')
+    .replace(/^\/+|\/+$/g, '');
 }
 
 export function contentHref(section: string, id: string) {
