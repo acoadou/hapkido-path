@@ -1,0 +1,16 @@
+---
+import ContentLayout from '@layouts/ContentLayout.astro';
+import Disclaimer from '@components/Disclaimer.astro';
+import SafetyNote from '@components/SafetyNote.astro';
+---
+<ContentLayout title="About" eyebrow="Project notes" description="What The Hapkido Path is, what it is not, and how the content is organized.">
+  <h2>What this site is</h2>
+  <p>The Hapkido Path is a public static study guide that combines a guided learning path, a technical atlas, principles, Korean vocabulary, practice tools, and source notes.</p>
+  <h2>What this site is not</h2>
+  <p>It is not an official curriculum, certification system, replacement for in-person instruction, or claim that one school’s terminology applies everywhere.</p>
+  <h2>How the content is organized</h2>
+  <p>Belt pages organize practice in sequence. Technique pages preserve technical notes. Principle pages connect recurring mechanics across techniques. Korean and practice pages support review.</p>
+  <div class="grid grid-2"><Disclaimer /><SafetyNote /></div>
+  <h2>Contribution guidelines placeholder</h2>
+  <p>Future contribution notes should ask contributors to write in English, use original wording, cite sources, avoid copying copyrighted curriculum, and mark school-specific variations clearly.</p>
+</ContentLayout>

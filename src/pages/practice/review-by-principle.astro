@@ -1,0 +1,10 @@
+---
+import ContentLayout from '@layouts/ContentLayout.astro';
+import PrincipleCard from '@components/PrincipleCard.astro';
+import { getCollection } from 'astro:content';
+import { withBase } from '@utils/paths';
+const principles = (await getCollection('principles')).sort((a, b) => a.data.order - b.data.order);
+---
+<ContentLayout title="Review by Principle" eyebrow="Practice" description="Choose a principle, then review the techniques that demonstrate it.">
+  <div class="grid grid-2">{principles.map((principle) => <PrincipleCard principle={principle} href={withBase(`/principles/${principle.data.slug}/`)} />)}</div>
+</ContentLayout>

@@ -1,0 +1,42 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Checklist from '@components/Checklist.astro';
+import Tag from '@components/Tag.astro';
+interface Props { entry: any; }
+const { entry } = Astro.props;
+const data = entry.data;
+---
+<BaseLayout title={data.title} description={data.summary}>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">{data.rankName}</p>
+      <h1>{data.title}</h1>
+      <p class="muted intro">{data.summary}</p>
+      <div class="grid grid-2 page-grid">
+        <article class="content-panel">
+          <slot />
+          <h2>Learning objectives</h2>
+          <ul>{data.objectives.map((item) => <li>{item}</li>)}</ul>
+          <h2>Technique groups</h2>
+          <div class="tags">{data.techniqueGroups.map((item) => <Tag label={item} />)}</div>
+          <h2>Principles introduced</h2>
+          <div class="tags">{data.principles.map((item) => <Tag label={item} />)}</div>
+          <h2>Korean vocabulary introduced</h2>
+          <ul>{data.koreanTopics.map((item) => <li>{item}</li>)}</ul>
+        </article>
+        <aside class="side-stack">
+          <Checklist title="Practice checklist" items={data.checklist} />
+          <Checklist title="Exam readiness checklist" items={data.examChecklist} />
+          <section class="card"><h2>Related techniques</h2><ul>{data.relatedTechniques.map((item) => <li>{item}</li>)}</ul></section>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .intro { max-width: 760px; font-size: 1.15rem; }
+  .page-grid { align-items: start; grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.9fr); }
+  .side-stack { display: grid; gap: 1rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1rem; }
+  @media (max-width: 860px) { .page-grid { grid-template-columns: 1fr; } }
+</style>

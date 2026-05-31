@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Technique image placeholder</title>
+  <desc id="desc">A simple placeholder for original Hapkido technique photos or diagrams.</desc>
+  <rect width="1200" height="800" fill="#f8f7f2"/>
+  <rect x="80" y="80" width="1040" height="640" rx="32" fill="#ffffff" stroke="#e5e1d8" stroke-width="8"/>
+  <path d="M360 520c120-190 310-240 480-150" fill="none" stroke="#8b2f2f" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="350" cy="525" r="34" fill="#172033"/>
+  <circle cx="850" cy="360" r="34" fill="#172033"/>
+  <text x="600" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#667085">Original technique image placeholder</text>
+</svg>

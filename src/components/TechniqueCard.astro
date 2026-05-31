@@ -1,0 +1,26 @@
+---
+import Tag from './Tag.astro';
+interface Props { technique: { data: { title: string; category: string; beltLevel: string; attackType: string; summary: string; principles: string[]; slug: string; } }; href: string; }
+const { technique, href } = Astro.props;
+const data = technique.data;
+---
+<article class="card technique-card">
+  <p class="eyebrow">{data.category}</p>
+  <h3><a href={href}>{data.title}</a></h3>
+  <p>{data.summary}</p>
+  <dl>
+    <div><dt>Belt</dt><dd>{data.beltLevel}</dd></div>
+    <div><dt>Attack</dt><dd>{data.attackType}</dd></div>
+  </dl>
+  <div class="tags">{data.principles.map((principle) => <Tag label={principle} />)}</div>
+</article>
+<style>
+  .technique-card { display: grid; gap: 0.6rem; }
+  h3, p { margin: 0; }
+  h3 a { color: var(--color-text); text-decoration: none; }
+  dl { display: grid; gap: 0.35rem; margin: 0; }
+  div { min-width: 0; }
+  dt { color: var(--color-muted); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; }
+  dd { margin: 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+</style>

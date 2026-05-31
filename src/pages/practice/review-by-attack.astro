@@ -1,0 +1,10 @@
+---
+import ContentLayout from '@layouts/ContentLayout.astro';
+import TechniqueCard from '@components/TechniqueCard.astro';
+import { getCollection } from 'astro:content';
+import { withBase } from '@utils/paths';
+const techniques = (await getCollection('techniques')).sort((a, b) => a.data.attackType.localeCompare(b.data.attackType));
+---
+<ContentLayout title="Review by Attack" eyebrow="Practice" description="Review sample techniques by attack type or training situation.">
+  <div class="grid grid-2">{techniques.map((technique) => <TechniqueCard technique={technique} href={withBase(`/techniques/${technique.data.slug}/`)} />)}</div>
+</ContentLayout>

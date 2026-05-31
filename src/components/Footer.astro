@@ -1,0 +1,22 @@
+---
+import { withBase } from '@utils/paths';
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>The Hapkido Path</strong>
+      <p>This site follows a personal learning path and technical study notes. Hapkido curricula vary widely between schools and federations. This site is not an official curriculum and should not replace instruction from a qualified teacher.</p>
+    </div>
+    <div>
+      <p>© {new Date().getFullYear()} The Hapkido Path. Content placeholders for study organization.</p>
+      <p><a href={withBase('/sources/')}>Sources</a> · <a href={withBase('/about/')}>About</a></p>
+    </div>
+  </div>
+</footer>
+<style>
+  .site-footer { margin-top: 3rem; border-top: 1px solid var(--color-border); background: #f1efe7; color: var(--color-muted); }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1rem; padding: 2rem 0; }
+  strong { color: var(--color-text); }
+  p { margin: 0.45rem 0; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; } }
+</style>
