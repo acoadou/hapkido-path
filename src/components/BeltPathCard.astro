@@ -1,16 +1,18 @@
 ---
-interface Props { belt: { data: { title: string; objectives: string[]; techniqueGroups: string[]; summary: string; } }; href: string; }
+interface Props { belt: { data: { title: string; objectives?: string[]; techniqueGroups?: string[]; techniques?: string[]; summary: string; } }; href: string; }
 const { belt, href } = Astro.props;
+const objectives = belt.data.objectives ?? [];
+const groups = belt.data.techniqueGroups ?? belt.data.techniques ?? [];
 ---
 <article class="card belt-card">
   <p class="eyebrow">Learning path</p>
   <h3>{belt.data.title}</h3>
   <p>{belt.data.summary}</p>
   <strong>Objectives</strong>
-  <ul>{belt.data.objectives.slice(0, 3).map((item) => <li>{item}</li>)}</ul>
-  <strong>Main technique groups</strong>
-  <p class="muted">{belt.data.techniqueGroups.join(' · ')}</p>
-  <a class="button secondary" href={href}>View belt page</a>
+  <ul>{objectives.slice(0, 3).map((item) => <li>{item}</li>)}</ul>
+  <strong>Main focus</strong>
+  <p class="muted">{groups.slice(0, 4).join(' · ')}</p>
+  <a class="button secondary" href={href}>View level page</a>
 </article>
 <style>
   .belt-card { display: flex; flex-direction: column; gap: 0.45rem; }

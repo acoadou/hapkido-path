@@ -1,39 +1,46 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Tag from '@components/Tag.astro';
 import SafetyNote from '@components/SafetyNote.astro';
 interface Props { entry: any; }
 const { entry } = Astro.props;
 const data = entry.data;
+const belt = data.belt ?? data.beltLevel ?? 'Unassigned';
+const attack = data.attack ?? data.attackType ?? 'Unassigned attack';
+const risks = data.risks ?? data.riskAreas ?? [];
+const related = data.relatedTechniques ?? [];
 ---
 <BaseLayout title={data.title} description={data.summary}>
   <section class="section">
     <div class="container">
-      <p class="eyebrow">{data.category}</p>
+      <Breadcrumbs items={[{ label: 'Techniques', href: '/techniques/' }, { label: data.category.replace(/-/g, ' ') }, { label: data.title }]} />
+      <p class="eyebrow">{data.category.replace(/-/g, ' ')}</p>
       <h1>{data.title}</h1>
-      <p class="muted intro">{data.summary}</p>
+      {data.summary && <p class="muted intro">{data.summary}</p>}
       <ul class="meta-list">
-        <li><Tag label={data.beltLevel} /></li>
-        <li><Tag label={data.attackType} /></li>
-        {data.riskAreas.map((risk) => <li><Tag label={`Risk: ${risk}`} /></li>)}
+        <li><Tag label={belt} /></li>
+        <li><Tag label={attack} /></li>
+        {risks.map((risk) => <li><Tag label={`Risk: ${risk}`} /></li>)}
       </ul>
       <div class="grid grid-2 page-grid">
-        <article class="content-panel">
-          <h2>Technical notes</h2>
-          <p><strong>Core principle:</strong> {data.corePrinciple}</p>
-          <slot />
-        </article>
+        <article class="content-panel"><slot /></article>
         <aside class="side-stack">
           <SafetyNote />
+          <section class="card">
+            <h2>Reference status</h2>
+            <p><strong>School name:</strong> {data.school_name ?? data.title}</p>
+            <p><strong>Tedeschi reference:</strong> {data.tedeschi_reference_name || 'TODO'}</p>
+            <p><strong>Reference page:</strong> {data.tedeschi_reference_page || 'TODO'}</p>
+          </section>
           <section class="card">
             <h2>Related principles</h2>
             <div class="tags">{data.principles.map((principle) => <Tag label={principle} />)}</div>
           </section>
           <section class="card">
             <h2>Related techniques</h2>
-            <ul>{data.relatedTechniques.map((technique) => <li>{technique}</li>)}</ul>
+            <ul>{related.map((technique) => <li>{technique}</li>)}</ul>
           </section>
-          <section class="placeholder">Image gallery placeholder for original photos or diagrams.</section>
         </aside>
       </div>
     </div>

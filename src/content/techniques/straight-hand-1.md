@@ -1,22 +1,30 @@
 ---
 title: "Straight Hand 1"
-slug: "straight-hand-1"
-category: "Straight Hands"
-beltLevel: "White to Yellow"
-attackType: "Straight wrist or hand contact"
-corePrinciple: "Enter along the centerline while keeping the elbow connected to the body."
-riskAreas:
-  - wrist
-  - shoulder
+type: technique
+school_name: "Straight Hand 1"
+tedeschi_reference_name: ""
+tedeschi_reference_page: ""
+alternate_names: []
+belt: white-to-yellow
+category: straight-hands
+attack: straight-wrist-or-hand-contact
 principles:
   - centerline
   - elbow-line
+risks:
+  - wrist
+  - shoulder
+partner_required: true
+solo_practice: supported
+exam_relevant: true
+status: draft
+lessons:
+  - /learn/white-to-yellow/lesson-03-first-grabs-or-breakaways/
 relatedTechniques:
-  - outside-sleeve-1
+  - Outside Sleeve 1
 summary: "An introductory straight-hand pattern for learning posture, centerline connection, and relaxed arm structure."
 order: 3
 ---
-
 ## Short reminder
 
 Use a calm straight-line entry to connect your hand, elbow, and center before adding any lock or takedown idea.

@@ -1,12 +1,15 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Tag from '@components/Tag.astro';
 interface Props { entry: any; }
 const { entry } = Astro.props;
+const related = entry.data.related_techniques ?? entry.data.relatedTechniques ?? [];
 ---
 <BaseLayout title={entry.data.title} description={entry.data.summary}>
   <section class="section">
     <div class="container">
+      <Breadcrumbs items={[{ label: 'Principles', href: '/principles/' }, { label: entry.data.title }]} />
       <p class="eyebrow">Principle</p>
       <h1>{entry.data.title}</h1>
       <p class="muted intro">{entry.data.summary}</p>
@@ -14,7 +17,7 @@ const { entry } = Astro.props;
         <article class="content-panel"><slot /></article>
         <aside class="card">
           <h2>Related techniques</h2>
-          <div class="tags">{entry.data.relatedTechniques.map((technique) => <Tag label={technique} />)}</div>
+          <div class="tags">{related.map((technique) => <Tag label={technique} />)}</div>
         </aside>
       </div>
     </div>

@@ -1,23 +1,31 @@
 ---
 title: "Forward Roll"
-slug: "forward-roll"
-category: "Breakfalls & Rolls"
-beltLevel: "White to Yellow"
-attackType: "Falling practice"
-corePrinciple: "Round the body, protect the head, and spread contact across the back rather than landing on one point."
-riskAreas:
-  - neck
-  - shoulder
-  - back
+type: technique
+school_name: "Forward Roll"
+tedeschi_reference_name: ""
+tedeschi_reference_page: ""
+alternate_names: []
+belt: white-to-yellow
+category: breakfalls-rolls
+attack: falling-practice
 principles:
   - safe-falling
   - centerline
+risks:
+  - neck
+  - shoulder
+  - back
+partner_required: false
+solo_practice: supported
+exam_relevant: true
+status: draft
+lessons:
+  - /learn/white-to-yellow/lesson-02-basic-movement-and-falling/
 relatedTechniques:
-  - outside-sleeve-1
+  - Outside Sleeve 1
 summary: "A foundational rolling skill for safely receiving movement and building confidence before throws or takedowns."
 order: 4
 ---
-
 ## Short reminder
 
 Start low, make a round path from shoulder to opposite hip, and stand only when balance is available.

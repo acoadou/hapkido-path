@@ -1,11 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-interface Props { title: string; description?: string; eyebrow?: string; }
-const { title, description, eyebrow } = Astro.props;
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+interface Props { title: string; description?: string; eyebrow?: string; breadcrumbs?: { label: string; href?: string }[]; }
+const { title, description, eyebrow, breadcrumbs = [] } = Astro.props;
 ---
 <BaseLayout title={title} description={description}>
   <section class="section">
     <div class="container">
+      {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
       {eyebrow && <p class="eyebrow">{eyebrow}</p>}
       <h1>{title}</h1>
       {description && <p class="muted intro">{description}</p>}

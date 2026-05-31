@@ -1,0 +1,21 @@
+---
+import { getCollection, render } from 'astro:content';
+import ContentLayout from '@layouts/ContentLayout.astro';
+import { cleanContentId, labelFromSlug } from '@utils/paths';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('learn');
+  return entries.map((entry) => ({ params: { slug: cleanContentId(entry.id) }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const data = entry.data;
+const slug = cleanContentId(entry.id);
+const parts = slug.split('/');
+const crumbs = [{ label: 'Learn', href: '/learn/' }];
+if (parts.length > 1) crumbs.push({ label: labelFromSlug(parts[0]), href: `/learn/${parts[0]}/` });
+crumbs.push({ label: data.title });
+---
+<ContentLayout title={data.title} eyebrow={data.type === 'belt-overview' ? 'Learning level' : 'Lesson'} description={data.summary} breadcrumbs={crumbs}>
+  <Content />
+</ContentLayout>

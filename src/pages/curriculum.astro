@@ -1,0 +1,28 @@
+---
+import ContentLayout from '@layouts/ContentLayout.astro';
+import Card from '@components/Card.astro';
+import { withBase } from '@utils/paths';
+---
+<ContentLayout title="Curriculum" eyebrow="Learning map" description="A scoped map of the active Hapkido study path and future levels that may be added later." breadcrumbs={[{ label: 'Curriculum' }]}>
+  <p>This is a study path organized by belt-like levels. It is based on Anthony's school terminology where known, but it is not an official curriculum.</p>
+
+  <h2>Active levels</h2>
+  <div class="grid grid-2">
+    <Card title="White to Yellow" href={withBase('/learn/white-to-yellow/')}>
+      <p><strong>Status:</strong> active scaffold.</p>
+      <p><strong>Focus:</strong> foundations, basic movement, falling, and first grabs or breakaways.</p>
+    </Card>
+    <Card title="Yellow to Green" href={withBase('/learn/yellow-to-green/')}>
+      <p><strong>Status:</strong> active scaffold.</p>
+      <p><strong>Focus:</strong> sleeve grabs, outside sleeve, wrist rotation, posture breaking, and basic pins.</p>
+    </Card>
+  </div>
+
+  <h2>Future levels</h2>
+  <p>The following levels may be added later, but are not scaffolded yet:</p>
+  <ul>
+    <li>Green to Blue</li>
+    <li>Blue to Red</li>
+    <li>Red to Black</li>
+  </ul>
+</ContentLayout>

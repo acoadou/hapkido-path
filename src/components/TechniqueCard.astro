@@ -1,16 +1,16 @@
 ---
 import Tag from './Tag.astro';
-interface Props { technique: { data: { title: string; category: string; beltLevel: string; attackType: string; summary: string; principles: string[]; } }; href: string; }
+interface Props { technique: { data: { title: string; category: string; belt?: string; beltLevel?: string; attack?: string; attackType?: string; summary: string; principles: string[]; } }; href: string; }
 const { technique, href } = Astro.props;
 const data = technique.data;
 ---
 <article class="card technique-card">
-  <p class="eyebrow">{data.category}</p>
+  <p class="eyebrow">{data.category.replace(/-/g, ' ')}</p>
   <h3><a href={href}>{data.title}</a></h3>
   <p>{data.summary}</p>
   <dl>
-    <div><dt>Belt</dt><dd>{data.beltLevel}</dd></div>
-    <div><dt>Attack</dt><dd>{data.attackType}</dd></div>
+    <div><dt>Belt</dt><dd>{data.belt ?? data.beltLevel}</dd></div>
+    <div><dt>Attack</dt><dd>{data.attack ?? data.attackType}</dd></div>
   </dl>
   <div class="tags">{data.principles.map((principle) => <Tag label={principle} />)}</div>
 </article>
