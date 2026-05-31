@@ -1,0 +1,9 @@
+---
+import { withBase } from '@utils/paths';
+import { hrefForReference, labelFromReference, type ReferenceKind } from '@utils/references';
+interface Props { value: string; kind?: ReferenceKind; label?: string; }
+const { value, kind = 'generic', label } = Astro.props;
+const href = hrefForReference(value, kind);
+const text = label ?? labelFromReference(value);
+---
+{href ? <a href={href.startsWith('http') ? href : withBase(href)}>{text}</a> : <span>{text}</span>}

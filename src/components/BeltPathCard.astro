@@ -1,4 +1,5 @@
 ---
+import InlineReferenceList from './InlineReferenceList.astro';
 interface Props { belt: { data: { title: string; objectives?: string[]; techniqueGroups?: string[]; techniques?: string[]; summary: string; } }; href: string; }
 const { belt, href } = Astro.props;
 const objectives = belt.data.objectives ?? [];
@@ -11,7 +12,7 @@ const groups = belt.data.techniqueGroups ?? belt.data.techniques ?? [];
   <strong>Objectives</strong>
   <ul>{objectives.slice(0, 3).map((item) => <li>{item}</li>)}</ul>
   <strong>Main focus</strong>
-  <p class="muted">{groups.slice(0, 4).join(' · ')}</p>
+  <p class="muted"><InlineReferenceList items={groups} kind="technique" limit={4} /></p>
   <a class="button secondary" href={href}>View level page</a>
 </article>
 <style>

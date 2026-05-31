@@ -1,0 +1,14 @@
+---
+import ReferenceLink from './ReferenceLink.astro';
+import type { ReferenceKind } from '@utils/references';
+interface Props { items?: string[]; kind?: ReferenceKind; limit?: number; }
+const { items = [], kind = 'generic', limit } = Astro.props;
+const visibleItems = typeof limit === 'number' ? items.slice(0, limit) : items;
+---
+{visibleItems.length > 0 ? (
+  <span class="inline-reference-list">
+    {visibleItems.map((item, index) => (
+      <span><ReferenceLink value={item} kind={kind} />{index < visibleItems.length - 1 ? <span aria-hidden="true"> · </span> : null}</span>
+    ))}
+  </span>
+) : <span class="muted">To be added.</span>}

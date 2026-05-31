@@ -1,5 +1,6 @@
 ---
 import Tag from './Tag.astro';
+import ReferenceLink from './ReferenceLink.astro';
 interface Props { technique: { data: { title: string; category: string; belt?: string; beltLevel?: string; attack?: string; attackType?: string; summary: string; principles: string[]; } }; href: string; }
 const { technique, href } = Astro.props;
 const data = technique.data;
@@ -12,7 +13,7 @@ const data = technique.data;
     <div><dt>Belt</dt><dd>{data.belt ?? data.beltLevel}</dd></div>
     <div><dt>Attack</dt><dd>{data.attack ?? data.attackType}</dd></div>
   </dl>
-  <div class="tags">{data.principles.map((principle) => <Tag label={principle} />)}</div>
+  <div class="tags">{data.principles.map((principle) => <Tag><ReferenceLink value={principle} kind="principle" /></Tag>)}</div>
 </article>
 <style>
   .technique-card { display: grid; gap: 0.6rem; }

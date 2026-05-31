@@ -1,0 +1,11 @@
+---
+import ReferenceLink from './ReferenceLink.astro';
+import type { ReferenceKind } from '@utils/references';
+interface Props { items?: string[]; kind?: ReferenceKind; emptyText?: string; }
+const { items = [], kind = 'generic', emptyText = 'To be added.' } = Astro.props;
+---
+{items.length > 0 ? (
+  <ul>
+    {items.map((item) => <li><ReferenceLink value={item} kind={kind} /></li>)}
+  </ul>
+) : <p class="muted">{emptyText}</p>}

@@ -3,6 +3,8 @@ import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Tag from '@components/Tag.astro';
 import SafetyNote from '@components/SafetyNote.astro';
+import ReferenceList from '@components/ReferenceList.astro';
+import ReferenceLink from '@components/ReferenceLink.astro';
 interface Props { entry: any; }
 const { entry } = Astro.props;
 const data = entry.data;
@@ -10,12 +12,13 @@ const belt = data.belt ?? data.beltLevel ?? 'Unassigned';
 const attack = data.attack ?? data.attackType ?? 'Unassigned attack';
 const risks = data.risks ?? data.riskAreas ?? [];
 const related = data.relatedTechniques ?? [];
+const categoryLabel = data.category.replace(/-/g, ' ');
 ---
 <BaseLayout title={data.title} description={data.summary}>
   <section class="section">
     <div class="container">
-      <Breadcrumbs items={[{ label: 'Techniques', href: '/techniques/' }, { label: data.category.replace(/-/g, ' ') }, { label: data.title }]} />
-      <p class="eyebrow">{data.category.replace(/-/g, ' ')}</p>
+      <Breadcrumbs items={[{ label: 'Techniques', href: '/techniques/' }, { label: categoryLabel }, { label: data.title }]} />
+      <p class="eyebrow">{categoryLabel}</p>
       <h1>{data.title}</h1>
       {data.summary && <p class="muted intro">{data.summary}</p>}
       <ul class="meta-list">
@@ -35,11 +38,11 @@ const related = data.relatedTechniques ?? [];
           </section>
           <section class="card">
             <h2>Related principles</h2>
-            <div class="tags">{data.principles.map((principle) => <Tag label={principle} />)}</div>
+            <div class="tags">{data.principles.map((principle) => <Tag><ReferenceLink value={principle} kind="principle" /></Tag>)}</div>
           </section>
           <section class="card">
             <h2>Related techniques</h2>
-            <ul>{related.map((technique) => <li>{technique}</li>)}</ul>
+            <ReferenceList items={related} kind="technique" />
           </section>
         </aside>
       </div>
