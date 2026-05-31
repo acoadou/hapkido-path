@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BeltLayout from '@layouts/BeltLayout.astro';
 export async function getStaticPaths() {
   const entries = await getCollection('belts');
-  return entries.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 <BeltLayout entry={entry}><Content /></BeltLayout>

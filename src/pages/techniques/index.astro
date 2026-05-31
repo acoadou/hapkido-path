@@ -16,7 +16,7 @@ const categories = ['Breakfalls & Rolls', 'Breakaways', 'Straight Hands', 'Kibon
       <label>Filter by attack type <select><option>All attack types</option></select></label>
     </div>
   </section>
-  <div class="grid grid-2 technique-list">{techniques.map((technique) => <TechniqueCard technique={technique} href={withBase(`/techniques/${technique.data.slug}/`)} />)}</div>
+  <div class="grid grid-2 technique-list">{techniques.map((technique) => <TechniqueCard technique={technique} href={withBase(`/techniques/${technique.id}/`)} />)}</div>
 </ContentLayout>
 <style>
   .filter-panel { margin-bottom: 1.5rem; padding: 1rem; border-radius: var(--radius); background: var(--color-bg); border: 1px dashed var(--color-border); }
