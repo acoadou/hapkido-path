@@ -42,7 +42,7 @@ li + li { margin-top: 0.4rem; }
 .button.secondary { background: var(--color-surface); color: var(--color-accent); }
 .meta-list { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; list-style: none; }
 .content-panel { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); overflow-x: auto; padding: clamp(1.2rem, 3vw, 2rem); }
-.content-panel table { border-collapse: collapse; margin: 1rem 0; min-width: min(42rem, 100%); width: 100%; }
+.content-panel table { border-collapse: collapse; margin: 1rem 0; min-width: 42rem; width: 100%; }
 .content-panel th, .content-panel td { border: 1px solid var(--color-border); padding: 0.75rem; text-align: left; }
 .content-panel th { background: var(--color-accent-soft); }
 .callout { border: 1px solid var(--color-border); border-left: 5px solid var(--color-accent); background: var(--color-surface); border-radius: 14px; padding: 1rem; }

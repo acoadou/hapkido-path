@@ -38,44 +38,6 @@ function tableHtml(value) {
 }
 
 
-function headingText(node) {
-  if (!node || !Array.isArray(node.children)) return '';
-  return node.children.map((child) => child.value ?? '').join('').trim().toLowerCase();
-}
-
-function removeDuplicateTechniqueSections() {
-  const duplicateSectionHeadings = new Set([
-    'safety note',
-    'safety notes',
-    'reference status',
-    'related principles',
-    'related techniques'
-  ]);
-
-  return (tree, file) => {
-    const filePath = file?.history?.[0] ?? '';
-    if (!filePath.includes('/src/content/techniques/')) return;
-    if (!Array.isArray(tree.children)) return;
-
-    const children = [];
-    for (let index = 0; index < tree.children.length; index += 1) {
-      const node = tree.children[index];
-      const isDuplicateSection = node.type === 'heading' && node.depth === 2 && duplicateSectionHeadings.has(headingText(node));
-      if (!isDuplicateSection) {
-        children.push(node);
-        continue;
-      }
-
-      while (index + 1 < tree.children.length) {
-        const next = tree.children[index + 1];
-        if (next.type === 'heading' && next.depth <= node.depth) break;
-        index += 1;
-      }
-    }
-    tree.children = children;
-  };
-}
-
 function renderMarkdownTables() {
   const visit = (node) => {
     if (!node || typeof node !== 'object') return;
@@ -107,15 +69,15 @@ function rewriteMarkdownLinks() {
 }
 
 export default defineConfig({
-  site: 'https://acodou.github.io',
+  site: 'https://acoadou.github.io',
 
-  // GitHub Pages serves this project at https://acodou.github.io/hapkido-path/.
+  // GitHub Pages serves this project at https://acoadou.github.io/hapkido-path/.
   // Keep the trailing slash so generated internal links include the separator
   // between the repository base path and page path.
   base,
 
   markdown: {
-    remarkPlugins: [removeDuplicateTechniqueSections, renderMarkdownTables],
+    remarkPlugins: [renderMarkdownTables],
     rehypePlugins: [rewriteMarkdownLinks]
   },
 
