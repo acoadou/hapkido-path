@@ -26,6 +26,43 @@ relatedTechniques:
   - Outside Sleeve 1
   - Outside Sleeve 3
   - Sleeve 3
+visuals:
+  base_path: /images/techniques/outside-sleeve-2/
+  groups:
+    - title: Main sequence
+      frames:
+        - id: starting-position
+          file: 01-starting-position.png
+          caption: Starting position — attacker grabs the defender's sleeve or elbow area.
+        - id: trap-hand-and-elbow
+          file: 02-trap-hand-and-elbow.png
+          caption: Defender traps the hand and controls the elbow.
+        - id: drop-under-arm
+          file: 03-drop-under-arm.png
+          caption: Defender drops under and turns around the controlled arm.
+        - id: rear-outside-position
+          file: 04-rear-outside-position.png
+          caption: Defender reaches the rear outside position.
+        - id: takedown
+          file: 05-takedown.png
+          caption: Defender steps forward and drives the attacker down.
+        - id: pin
+          file: 06-pin.png
+          caption: Pin with the attacker's arm folded behind the back.
+    - title: Alternative takedown
+      frames:
+        - id: shoulder-control
+          file: alt-01-shoulder-control.png
+          caption: Defender controls the attacker's shoulder.
+        - id: knee-check
+          file: alt-02-knee-check.png
+          caption: Defender checks the back of the attacker's knee.
+        - id: backward-rotation
+          file: alt-03-backward-rotation.png
+          caption: Defender rotates backward around the right hip and foot.
+        - id: alternative-finish
+          file: alt-04-alternative-finish.png
+          caption: Attacker's base collapses into the alternative finish.
 summary: "The second outside sleeve reference keeps the same attack family but emphasizes angle change, elbow-line control, and a finish that should come from body alignment rather than arm pulling."
 order: 11
 ---
@@ -35,7 +72,6 @@ order: 11
 - School name: Outside Sleeve 2
 - Tedeschi / Hapkido reference: TODO
 - Alternate names: TODO
-- Source notes: Based on Anthony's school terminology and study notes. Do not assume an external reference mapping until it is verified.
 
 ## Summary
 
@@ -60,7 +96,7 @@ Include these details when class notes are added:
 - Move around the grip instead of pulling straight back.
 - Connect the wrist, elbow, shoulder, and posture into one line of control.
 - Break posture before asking uke to fall or receive a pin.
-- Transition to the ending control used by Anthony's school for Outside Sleeve 2.
+- Transition to the ending control used by the current school for Outside Sleeve 2.
 
 ## Entry condition
 
@@ -167,17 +203,6 @@ Start from the sleeve grip. Uke gives a realistic but cooperative hold. Nage per
 ## Variations and notes
 
 Use this section for verified class variations, instructor corrections, or differences between Outside Sleeve 2 and closely related sleeve techniques. Do not merge variations into the main sequence unless they are truly the same technique.
-
-## Visual reference
-
-TODO: Add original illustration or approved image.
-
-Planned frames:
-1. Starting position.
-2. First movement.
-3. Control established.
-4. Posture break.
-5. Ending position.
 
 ## Related principles
 

@@ -26,6 +26,30 @@ relatedTechniques:
   - Outside Sleeve 2
   - Outside Sleeve 3
   - Sleeve 1-2
+visuals:
+  base_path: /images/techniques/outside-sleeve-1/
+  frames:
+    - id: starting-position
+      file: 01-starting-position.png
+      caption: Starting position — attacker grabs the outside of the defender's sleeve.
+    - id: circular-motion
+      file: 02-circular-motion.png
+      caption: Defender begins the large outside circular motion.
+    - id: hand-capture
+      file: 03-hand-capture.png
+      caption: Defender captures the attacker's hand.
+    - id: sandwich-control
+      file: 04-sandwich-control.png
+      caption: The attacker's hand is trapped between both hands.
+    - id: wrist-twist
+      file: 05-wrist-twist.png
+      caption: The wrist is rotated outward and downward.
+    - id: body-drop
+      file: 06-body-drop.png
+      caption: Defender drops body weight to break posture.
+    - id: ending-pin
+      file: 07-ending-pin.png
+      caption: Ending pin with wrist compression.
 summary: "The first outside sleeve reference uses a large circular path to expose the gripping hand, secure two-hand control, rotate the wrist, and bring uke toward a controlled posture break."
 order: 10
 ---
@@ -35,7 +59,6 @@ order: 10
 - School name: Outside Sleeve 1
 - Tedeschi / Hapkido reference: TODO
 - Alternate names: TODO
-- Source notes: Based on Anthony's school terminology and study notes. Do not assume an external reference mapping until it is verified.
 
 ## Summary
 
@@ -60,7 +83,7 @@ Include these details when class notes are added:
 - Move around the grip instead of pulling straight back.
 - Connect the wrist, elbow, shoulder, and posture into one line of control.
 - Break posture before asking uke to fall or receive a pin.
-- Transition to the ending control used by Anthony's school for Outside Sleeve 1.
+- Transition to the ending control used by the current school for Outside Sleeve 1.
 
 ## Entry condition
 
@@ -167,17 +190,6 @@ Start from the sleeve grip. Uke gives a realistic but cooperative hold. Nage per
 ## Variations and notes
 
 Use this section for verified class variations, instructor corrections, or differences between Outside Sleeve 1 and closely related sleeve techniques. Do not merge variations into the main sequence unless they are truly the same technique.
-
-## Visual reference
-
-TODO: Add original illustration or approved image.
-
-Planned frames:
-1. Starting position.
-2. First movement.
-3. Control established.
-4. Posture break.
-5. Ending position.
 
 ## Related principles
 

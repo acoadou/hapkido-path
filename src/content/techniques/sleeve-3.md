@@ -25,6 +25,30 @@ lessons:
 relatedTechniques:
   - Sleeve 1-2
   - Sleeve 4
+visuals:
+  base_path: /images/techniques/sleeve-3/
+  frames:
+    - id: starting-position
+      file: 01-starting-position.png
+      caption: Starting position — attacker grabs the defender's collar.
+    - id: trap-grabbing-hand
+      file: 02-trap-grabbing-hand.png
+      caption: Defender pins the attacker's fist to the collar.
+    - id: left-arm-circle
+      file: 03-left-arm-circle.png
+      caption: Defender circles the left arm over the attacker's arm.
+    - id: forearm-pressure
+      file: 04-forearm-pressure.png
+      caption: Defender presses the attacker's forearm inward.
+    - id: step-forward
+      file: 05-step-forward.png
+      caption: Defender steps forward with the left foot.
+    - id: hip-rotation
+      file: 06-hip-rotation.png
+      caption: Defender rotates the hips and torso to finish the lock.
+    - id: ending-position
+      file: 07-ending-position.png
+      caption: Attacker bends forward and goes down.
 summary: "Sleeve 3 is a draft reference for the third sleeve-grab technique, preserving the detailed study structure without inventing unverified details."
 order: 14
 ---
@@ -34,7 +58,6 @@ order: 14
 - School name: Sleeve 3
 - Tedeschi / Hapkido reference: TODO
 - Alternate names: TODO
-- Source notes: Based on Anthony's school terminology and study notes. Do not assume an external reference mapping until it is verified.
 
 ## Summary
 
@@ -59,7 +82,7 @@ Include these details when class notes are added:
 - Move around the grip instead of pulling straight back.
 - Connect the wrist, elbow, shoulder, and posture into one line of control.
 - Break posture before asking uke to fall or receive a pin.
-- Transition to the ending control used by Anthony's school for Sleeve 3.
+- Transition to the ending control used by the current school for Sleeve 3.
 
 ## Entry condition
 
@@ -166,17 +189,6 @@ Start from the sleeve grip. Uke gives a realistic but cooperative hold. Nage per
 ## Variations and notes
 
 Use this section for verified class variations, instructor corrections, or differences between Sleeve 3 and closely related sleeve techniques. Do not merge variations into the main sequence unless they are truly the same technique.
-
-## Visual reference
-
-TODO: Add original illustration or approved image.
-
-Planned frames:
-1. Starting position.
-2. First movement.
-3. Control established.
-4. Posture break.
-5. Ending position.
 
 ## Related principles
 

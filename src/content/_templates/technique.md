@@ -21,6 +21,25 @@ exam_relevant: true
 lessons:
   - /learn/yellow-to-green/lesson-02-outside-sleeve/
 status: draft
+
+visuals:
+  base_path: /images/techniques/<technique-slug>/
+  frames:
+    - id: starting-position
+      file: 01-starting-position.png
+      caption: Starting position.
+    - id: entry
+      file: 02-entry.png
+      caption: Entry.
+    - id: control
+      file: 03-control.png
+      caption: Control established.
+    - id: posture-break
+      file: 04-posture-break.png
+      caption: Posture break.
+    - id: ending-position
+      file: 05-ending-position.png
+      caption: Ending position.
 ---
 
 # Outside Sleeve 1
@@ -31,7 +50,6 @@ status: draft
 - Tedeschi reference name (`tedeschi_reference_name`): TODO — leave blank until verified
 - Tedeschi reference page (`tedeschi_reference_page`): TODO — leave blank until verified
 - Alternate names: TODO
-- Source notes: Based on Anthony's school terminology and study notes.
 
 ## Summary
 

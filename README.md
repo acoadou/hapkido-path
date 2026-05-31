@@ -98,3 +98,38 @@ astro.config.mjs                   Astro static-site configuration
 Recommended next steps include adding more belt levels, expanding technique pages, connecting related entries with richer links, replacing placeholder images with original or licensed assets, and implementing client-side filtering or flashcards only after the static structure is stable.
 
 Do not copy copyrighted curriculum text or images directly. Summarize, cite, and use original photos, notes, diagrams, or public-domain / licensed assets when possible.
+
+## Technique illustration placeholders
+
+Technique pages can reserve study-manual illustration slots before artwork exists. Add a `visuals` block to the technique frontmatter and declare every expected frame with an explicit filename. PNG is the recommended default; JPG and JPEG are also supported for photographic images. WebP is not required.
+
+```yaml
+visuals:
+  base_path: /images/techniques/example-technique/
+  frames:
+    - id: starting-position
+      file: 01-starting-position.png
+      caption: Starting position.
+```
+
+Each technique should store images in its own public folder:
+
+```text
+public/images/techniques/<technique-slug>/
+```
+
+The rendered URL is automatically adjusted for the GitHub Pages base path, so a declared file such as `01-starting-position.png` under `base_path: /images/techniques/outside-sleeve-1/` resolves correctly when the site is deployed under `/hapkido-path/`.
+
+Initial placeholder folders are reserved for:
+
+```text
+public/images/techniques/outside-sleeve-1/
+public/images/techniques/outside-sleeve-2/
+public/images/techniques/outside-sleeve-3/
+public/images/techniques/sleeve-1-2/
+public/images/techniques/sleeve-3/
+public/images/techniques/sleeve-4/
+public/images/techniques/sleeve-5-6/
+```
+
+When the declared image file exists, the technique page displays it. When it is missing, the page displays a clean `Illustration pending` placeholder with the expected filename and the frame caption. Authors do not need to edit the Markdown body when adding images later.

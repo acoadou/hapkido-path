@@ -1,5 +1,22 @@
 import { defineCollection, z } from 'astro:content';
 
+
+const visualFrameSchema = z.object({
+  id: z.string(),
+  file: z.string().regex(/\.(png|jpe?g)$/i, 'Technique visuals support PNG, JPG, and JPEG files.'),
+  caption: z.string(),
+  alt: z.string().optional()
+});
+
+const visualsSchema = z.object({
+  base_path: z.string(),
+  frames: z.array(visualFrameSchema).optional(),
+  groups: z.array(z.object({
+    title: z.string().optional(),
+    frames: z.array(visualFrameSchema)
+  })).optional()
+});
+
 const belts = defineCollection({
   type: 'content',
   schema: z.object({
@@ -60,7 +77,8 @@ const techniques = defineCollection({
     lessons: z.array(z.string()).default([]),
     relatedTechniques: z.array(z.string()).default([]),
     summary: z.string().default(''),
-    order: z.number().default(0)
+    order: z.number().default(0),
+    visuals: visualsSchema.optional()
   })
 });
 
