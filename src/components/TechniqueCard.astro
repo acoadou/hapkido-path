@@ -1,6 +1,6 @@
 ---
 import Tag from './Tag.astro';
-interface Props { technique: { data: { title: string; category: string; beltLevel: string; attackType: string; summary: string; principles: string[]; slug: string; } }; href: string; }
+interface Props { technique: { data: { title: string; category: string; beltLevel: string; attackType: string; summary: string; principles: string[]; } }; href: string; }
 const { technique, href } = Astro.props;
 const data = technique.data;
 ---

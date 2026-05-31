@@ -18,7 +18,7 @@ const belts = (await getCollection('belts')).sort((a, b) => a.data.order - b.dat
   </div></section>
   <section class="section"><div class="container">
     <p class="eyebrow">Featured beginner path</p><h2>Start with the first two training arcs</h2>
-    <div class="grid grid-2">{belts.map((belt) => <BeltPathCard belt={belt} href={withBase(`/learn/${belt.data.slug}/`)} />)}</div>
+    <div class="grid grid-2">{belts.map((belt) => <BeltPathCard belt={belt} href={withBase(`/learn/${belt.id}/`)} />)}</div>
   </div></section>
   <section class="section-tight"><div class="container grid grid-2"><SafetyNote /><Disclaimer /></div></section>
 </BaseLayout>

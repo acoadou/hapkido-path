@@ -4,7 +4,6 @@ const belts = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    slug: z.string(),
     order: z.number(),
     rankName: z.string(),
     summary: z.string(),
@@ -22,7 +21,6 @@ const techniques = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    slug: z.string(),
     category: z.string(),
     beltLevel: z.string(),
     attackType: z.string(),
@@ -39,7 +37,6 @@ const principles = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    slug: z.string(),
     summary: z.string(),
     relatedTechniques: z.array(z.string()),
     order: z.number()
@@ -50,7 +47,6 @@ const korean = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    slug: z.string(),
     summary: z.string(),
     order: z.number()
   })

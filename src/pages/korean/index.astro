@@ -7,5 +7,5 @@ const pages = (await getCollection('korean')).sort((a, b) => a.data.order - b.da
 ---
 <ContentLayout title="Korean" eyebrow="Language reference" description="Vocabulary, commands, counting, and etiquette notes for training context.">
   <p class="callout">Terminology may vary by school and romanization system. Use this section as a study aid, not as a universal standard.</p>
-  <div class="grid grid-2">{pages.map((page) => <Card title={page.data.title} href={withBase(`/korean/${page.data.slug}/`)}><p>{page.data.summary}</p></Card>)}</div>
+  <div class="grid grid-2">{pages.map((page) => <Card title={page.data.title} href={withBase(`/korean/${page.id}/`)}><p>{page.data.summary}</p></Card>)}</div>
 </ContentLayout>

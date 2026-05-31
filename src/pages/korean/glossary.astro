@@ -1,9 +1,9 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 import ContentLayout from '@layouts/ContentLayout.astro';
 const entry = await getEntry('korean', 'glossary');
 if (!entry) throw new Error('Missing Korean content: glossary');
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 <ContentLayout title={entry.data.title} eyebrow="Korean" description={entry.data.summary}>
   <Content />
