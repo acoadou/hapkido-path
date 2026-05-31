@@ -47,7 +47,3 @@ Use a calm straight-line entry to connect your hand, elbow, and center before ad
 - Locking the elbow rigidly.
 - Raising the shoulder under pressure.
 - Looking at the hands instead of the partner's posture.
-
-## Safety notes
-
-Use this as a structure drill before adding joint pressure.

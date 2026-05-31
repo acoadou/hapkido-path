@@ -54,12 +54,6 @@ summary: "Sleeve 1-2 is a paired sleeve-grab reference for studying the first tw
 order: 13
 ---
 
-## Names and references
-
-- School name: Sleeve 1-2
-- Tedeschi / Hapkido reference: TODO
-- Alternate names: TODO
-
 ## Summary
 
 Sleeve 1-2 is a paired sleeve-grab reference for studying the first two school variations as one review unit until the differences are fully documented.
@@ -171,14 +165,6 @@ Uke should feel posture change through the structure, not a sudden isolated atta
 | Rushing the takedown | Uke falls before structure is ready | Break posture first, then finish |
 | Ignoring uke's feedback | Turns study into unsafe resistance | Communicate and stop on sharp pain |
 
-## Safety notes
-
-- Apply wrist pressure gradually.
-- Do not crank the wrist suddenly.
-- Uke should move with the pressure rather than resist suddenly.
-- Stop immediately on sharp wrist, elbow, or shoulder pain.
-- Practice takedowns only with adequate falling skill, space, and instructor approval.
-
 ## Solo practice
 
 Solo practice can train the arm path, hip turn, step-pivot pattern, and level change. The lock and takedown cannot be fully learned solo because timing, grip pressure, and uke's structure require a partner.
@@ -190,18 +176,6 @@ Start from the sleeve grip. Uke gives a realistic but cooperative hold. Nage per
 ## Variations and notes
 
 Use this section for verified class variations, instructor corrections, or differences between Sleeve 1-2 and closely related sleeve techniques. Do not merge variations into the main sequence unless they are truly the same technique.
-
-## Related principles
-
-- [Wrist Rotation](/principles/wrist-rotation/)
-- [Centerline](/principles/centerline/)
-- [Body Drop](/principles/body-drop/)
-
-## Related techniques
-
-- Sleeve 3
-- Sleeve 4
-- Outside Sleeve 1
 
 ## Appears in lessons
 

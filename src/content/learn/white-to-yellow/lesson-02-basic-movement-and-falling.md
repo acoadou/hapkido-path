@@ -12,11 +12,40 @@ principles:
   - centerline
 estimated_time: 30-45 minutes
 ---
+## Goal
 
-## Purpose
+Practice basic movement paths and falling preparation before combining speed, grips, or takedowns.
 
-Practice movement paths and falling preparation before combining speed, grips, or takedowns.
+## Prerequisites
+
+- Lesson 1 safety habits.
+- Mats or another instructor-approved falling surface.
+- Enough space to roll without contacting another person or object.
+
+## Warm-up
+
+- Joint mobility from neck to ankles.
+- Low level changes and technical stand-ups.
+- Rocking motions on the back with the chin tucked.
 
 ## Technique links
 
 - [Forward Roll](/techniques/forward-roll/)
+
+## Solo review
+
+Trace the roll path from shoulder to opposite hip at a very low height. Pause after each attempt and check whether the head, neck, and arms stayed protected.
+
+## Partner drill
+
+A partner watches from the side and gives one observation at a time: head position, rounded back, breathing, or balanced finish. The partner does not push or throw.
+
+## Safety focus
+
+Keep the head off the mat, start low, and stop before fatigue causes flat or crooked rolls.
+
+## Review questions
+
+- Where should the head be during the roll?
+- Why does the roll travel from shoulder to opposite hip?
+- What signs mean the height or speed should be reduced?
