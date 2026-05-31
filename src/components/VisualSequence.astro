@@ -79,9 +79,9 @@ const groups: VisualGroup[] = visuals?.groups?.length
                   ) : (
                     <div class="visual-card__placeholder" role="note" aria-label={`Illustration pending for ${frame.file}`}>
                       <div class="visual-card__placeholder-box" aria-hidden="true">
-                        <span>Placeholder box</span>
+                        <span>Illustration pending</span>
                       </div>
-                      <span class="visual-card__filename"><strong>Expected filename</strong>{frame.file}</span>
+                      <span class="visual-card__filename"><strong>Expected file:</strong>{frame.file}</span>
                     </div>
                   )}
                 </div>
@@ -114,7 +114,7 @@ const groups: VisualGroup[] = visuals?.groups?.length
   .visual-sequence__grid {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
   }
 
   .visual-card {
@@ -132,6 +132,7 @@ const groups: VisualGroup[] = visuals?.groups?.length
     display: flex;
     font-size: 1.15rem;
     font-weight: 800;
+    gap: 0.35rem;
     letter-spacing: 0.02em;
     padding: 0.85rem 1rem 0;
   }

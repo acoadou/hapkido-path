@@ -14,6 +14,13 @@ const attack = data.attack ?? data.attackType ?? 'Unassigned attack';
 const risks = data.risks ?? data.riskAreas ?? [];
 const related = data.relatedTechniques ?? [];
 const categoryLabel = data.category.replace(/-/g, ' ');
+const body = entry.body ?? '';
+const hasSection = (headings: string[]) => headings.some((heading) => new RegExp(`^#{2,3}\\s+${heading}\\s*$`, 'im').test(body));
+const showSafetyNote = !hasSection(['Safety note', 'Safety notes']);
+const showReferenceStatus = !hasSection(['Reference status', 'Names and references']);
+const showRelatedPrinciples = data.principles.length > 0 && !hasSection(['Related principles']);
+const showRelatedTechniques = related.length > 0 && !hasSection(['Related techniques']);
+const showMetadata = showSafetyNote || showReferenceStatus || showRelatedPrinciples || showRelatedTechniques;
 ---
 <BaseLayout title={data.title} description={data.summary}>
   <section class="section">
@@ -27,33 +34,47 @@ const categoryLabel = data.category.replace(/-/g, ' ');
         <li><Tag label={attack} /></li>
         {risks.map((risk) => <li><Tag label={`Risk: ${risk}`} /></li>)}
       </ul>
-      <div class="grid grid-2 page-grid">
-        <article class="content-panel"><slot /><VisualSequence visuals={data.visuals} /></article>
-        <aside class="side-stack">
-          <SafetyNote />
-          <section class="card">
-            <h2>Reference status</h2>
-            <p><strong>School name:</strong> {data.school_name ?? data.title}</p>
-            <p><strong>Tedeschi reference:</strong> {data.tedeschi_reference_name || 'TODO'}</p>
-            <p><strong>Reference page:</strong> {data.tedeschi_reference_page || 'TODO'}</p>
-          </section>
-          <section class="card">
-            <h2>Related principles</h2>
-            <div class="tags">{data.principles.map((principle) => <Tag><ReferenceLink value={principle} kind="principle" /></Tag>)}</div>
-          </section>
-          <section class="card">
-            <h2>Related techniques</h2>
-            <ReferenceList items={related} kind="technique" />
-          </section>
-        </aside>
-      </div>
+      {showMetadata && (
+        <div class="metadata-grid" aria-label="Technique metadata">
+          {showSafetyNote && <SafetyNote />}
+          {showReferenceStatus && (
+            <section class="card">
+              <h2>Reference status</h2>
+              <p><strong>School name:</strong> {data.school_name ?? data.title}</p>
+              <p><strong>Tedeschi reference:</strong> {data.tedeschi_reference_name || 'TODO'}</p>
+              <p><strong>Reference page:</strong> {data.tedeschi_reference_page || 'TODO'}</p>
+            </section>
+          )}
+          {showRelatedPrinciples && (
+            <section class="card">
+              <h2>Related principles</h2>
+              <div class="tags">{data.principles.map((principle) => <Tag><ReferenceLink value={principle} kind="principle" /></Tag>)}</div>
+            </section>
+          )}
+          {showRelatedTechniques && (
+            <section class="card">
+              <h2>Related techniques</h2>
+              <ReferenceList items={related} kind="technique" />
+            </section>
+          )}
+        </div>
+      )}
+      <article class="content-panel technique-content"><slot /><VisualSequence visuals={data.visuals} /></article>
     </div>
   </section>
 </BaseLayout>
 <style>
   .intro { max-width: 760px; font-size: 1.15rem; }
-  .page-grid { align-items: start; grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr); margin-top: 1.5rem; }
-  .side-stack { display: grid; gap: 1rem; }
+  .metadata-grid {
+    align-items: stretch;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    margin-top: 1.5rem;
+  }
+  .metadata-grid :global(.callout),
+  .metadata-grid .card { height: 100%; }
+  .metadata-grid h2 { font-size: 1.2rem; letter-spacing: -0.02em; }
   .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-  @media (max-width: 860px) { .page-grid { grid-template-columns: 1fr; } }
+  .technique-content { margin-top: 1.5rem; }
 </style>
