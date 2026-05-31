@@ -3,13 +3,30 @@ import ContentLayout from '@layouts/ContentLayout.astro';
 import Card from '@components/Card.astro';
 import { withBase } from '@utils/paths';
 const links = [
-  ['Review by Belt', '/practice/review-by-belt/', 'Return to each rank path and its checklist.'],
+  ['Solo Drills', '/practice/solo-drills/', 'Practice footwork, movement paths, sequencing, and body organization without a partner.'],
+  ['Partner Drills', '/practice/partner-drills/', 'Use cooperative partner structures for safe feedback on grips, locks, and posture.'],
+  ['Review by Belt', '/practice/review-by-belt/', 'Return to each active learning level and its checklist.'],
   ['Review by Attack', '/practice/review-by-attack/', 'Group techniques by the kind of attack or grip.'],
   ['Review by Principle', '/practice/review-by-principle/', 'Study recurring mechanics across techniques.'],
-  ['Exam Checklists', '/practice/exam-checklists/', 'Use simple readiness checklists for sample ranks.'],
+  ['Exam Checklists', '/practice/exam-checklists/', 'Use readiness checklists for the first two learning arcs.'],
   ['Flashcards', '/practice/flashcards/', 'Placeholder structure for later interactive review.']
 ];
 ---
-<ContentLayout title="Practice" eyebrow="Review tools" description="Static practice supports for planning review sessions, preparing for exams, and revisiting core vocabulary.">
+<ContentLayout title="Practice" eyebrow="Review tools" description="Use this section to review techniques outside class without turning the site into a personal training log." breadcrumbs={[{ label: 'Practice' }]}>
+  <h2>Review modes</h2>
+  <ul>
+    <li>By belt</li>
+    <li>By attack</li>
+    <li>By principle</li>
+    <li>By exam checklist</li>
+  </ul>
+  <h2>Drill types</h2>
+  <ul>
+    <li>Solo movement drills</li>
+    <li>Partner drills</li>
+    <li>Flashcards</li>
+  </ul>
+  <h2>Safety</h2>
+  <p>Solo drills can help with footwork, movement paths, and sequencing. Locks, takedowns, and pins require partner feedback and should be practiced slowly.</p>
   <div class="grid grid-2">{links.map(([title, href, text]) => <Card title={title} href={withBase(href)}><p>{text}</p></Card>)}</div>
 </ContentLayout>

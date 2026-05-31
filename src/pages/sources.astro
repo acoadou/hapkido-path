@@ -1,15 +1,25 @@
 ---
 import ContentLayout from '@layouts/ContentLayout.astro';
 ---
-<ContentLayout title="Sources" eyebrow="References" description="A place to record references, further reading, and attribution notes as the project grows.">
+<ContentLayout title="Sources" eyebrow="References" description="A place to record references, further reading, and attribution notes as the project grows." breadcrumbs={[{ label: 'Sources' }]}>
   <h2>Books</h2>
-  <p>Placeholder for carefully cited books and training manuals used for background study.</p>
-  <h2>Federation / school resources</h2>
-  <p>Placeholder for official school or federation materials that should be summarized and cited rather than copied.</p>
-  <h2>Online references</h2>
-  <p>Placeholder for reputable online references with access dates and concise summaries.</p>
-  <h2>Video references</h2>
-  <p>Placeholder for video notes, timestamps, and attribution where permitted.</p>
+
+  <h3>Hapkido: Traditions, Philosophy, Technique — Marc Tedeschi</h3>
+  <p>Use this as a reference for terminology, historical context, and cross-checking technique families where possible.</p>
+  <p>When a technique page includes a Tedeschi reference, add:</p>
+  <ul>
+    <li>Reference name.</li>
+    <li>Page number or section, if known.</li>
+    <li>Notes on whether the school version differs.</li>
+  </ul>
+  <p class="callout">Do not add page numbers, quotes, or equivalence claims unless verified.</p>
+
+  <h2>School and class notes</h2>
+  <p>Technique names and sequencing may come from Anthony's school curriculum, class notes, structured writeups, and instructor feedback.</p>
+
+  <h2>Online and video references</h2>
+  <p>Use reputable online references with access dates and concise summaries. Use video notes only where attribution and permitted use are clear.</p>
+
   <h2>Notes on copyright and attribution</h2>
   <p class="callout">Do not copy copyrighted curriculum text or images directly. Summarize, cite, and use original photos, notes, diagrams, or public-domain / licensed assets when possible.</p>
 </ContentLayout>

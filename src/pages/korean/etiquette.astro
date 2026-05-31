@@ -5,6 +5,6 @@ const entry = await getEntry('korean', 'etiquette');
 if (!entry) throw new Error('Missing Korean content: etiquette');
 const { Content } = await render(entry);
 ---
-<ContentLayout title={entry.data.title} eyebrow="Korean" description={entry.data.summary}>
+<ContentLayout title={entry.data.title} eyebrow="Korean" description={entry.data.summary} breadcrumbs={[{ label: 'Korean', href: '/korean/' }, { label: entry.data.title }]}>
   <Content />
 </ContentLayout>

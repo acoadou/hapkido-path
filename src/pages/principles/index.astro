@@ -2,9 +2,9 @@
 import ContentLayout from '@layouts/ContentLayout.astro';
 import PrincipleCard from '@components/PrincipleCard.astro';
 import { getCollection } from 'astro:content';
-import { withBase } from '@utils/paths';
+import { contentHref } from '@utils/paths';
 const principles = (await getCollection('principles')).sort((a, b) => a.data.order - b.data.order);
 ---
-<ContentLayout title="Principles" eyebrow="Recurring mechanics" description="Study the mechanics that appear across many Hapkido techniques so each page connects back to practical movement ideas.">
-  <div class="grid grid-2">{principles.map((principle) => <PrincipleCard principle={principle} href={withBase(`/principles/${principle.id}/`)} />)}</div>
+<ContentLayout title="Principles" eyebrow="Mechanics" description="Reusable physical ideas that make techniques clearer, safer, and less dependent on strength." breadcrumbs={[{ label: 'Principles' }]}>
+  <div class="grid grid-2">{principles.map((principle) => <PrincipleCard principle={principle} href={contentHref('principles', principle.id)} />)}</div>
 </ContentLayout>

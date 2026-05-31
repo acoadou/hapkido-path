@@ -1,9 +1,10 @@
 ---
 import { getCollection, render } from 'astro:content';
 import TechniqueLayout from '@layouts/TechniqueLayout.astro';
+import { cleanContentId } from '@utils/paths';
 export async function getStaticPaths() {
   const entries = await getCollection('techniques');
-  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+  return entries.map((entry) => ({ params: { slug: cleanContentId(entry.id) }, props: { entry } }));
 }
 const { entry } = Astro.props;
 const { Content } = await render(entry);

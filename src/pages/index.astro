@@ -6,19 +6,26 @@ import BeltPathCard from '@components/BeltPathCard.astro';
 import Disclaimer from '@components/Disclaimer.astro';
 import SafetyNote from '@components/SafetyNote.astro';
 import { getCollection } from 'astro:content';
-import { withBase } from '@utils/paths';
-const belts = (await getCollection('belts')).sort((a, b) => a.data.order - b.data.order);
+import { contentHref, withBase } from '@utils/paths';
+const levels = (await getCollection('learn')).filter((entry) => entry.data.type === 'belt-overview').sort((a, b) => a.data.order - b.data.order);
 ---
 <BaseLayout title="The Hapkido Path">
-  <Hero title="The Hapkido Path" subtitle="A guided learning path and technical reference for Hapkido practice." primaryHref={withBase('/learn/')} primaryLabel="Start Learning" secondaryHref={withBase('/techniques/')} secondaryLabel="Browse Techniques" />
+  <Hero title="Hapkido Path" subtitle="A structured Hapkido study path for learning, reviewing, and organizing techniques." primaryHref={withBase('/learn/')} primaryLabel="Start Learning" secondaryHref={withBase('/techniques/')} secondaryLabel="Browse Techniques" />
+  <section class="section-tight"><div class="container">
+    <p class="lead">This site combines a beginner learning path organized by belt-like levels, a detailed technique atlas, practical principles, practice tools, Korean vocabulary notes, and source references.</p>
+    <p class="callout">The current scope covers White to Yellow and Yellow to Green only.</p>
+  </div></section>
   <section class="section-tight"><div class="container grid grid-3">
-    <Card title="Learn in order"><p>Follow a belt-based path with objectives, checklists, principles, and vocabulary.</p></Card>
-    <Card title="Review by principle"><p>Study the mechanics that repeat across many techniques, so practice is not just choreography.</p></Card>
-    <Card title="Explore by technique"><p>Use the technical atlas to review attacks, categories, risk areas, and related notes.</p></Card>
+    <Card title="Start learning" href={withBase('/learn/')}><p>Follow the active learning levels and lesson sequence.</p></Card>
+    <Card title="Browse techniques" href={withBase('/techniques/')}><p>Use detailed technique pages for technical review.</p></Card>
+    <Card title="Review principles" href={withBase('/principles/')}><p>Study recurring mechanics that connect techniques.</p></Card>
+    <Card title="Practice" href={withBase('/practice/')}><p>Use drills, checklists, and flashcard structures.</p></Card>
   </div></section>
   <section class="section"><div class="container">
-    <p class="eyebrow">Featured beginner path</p><h2>Start with the first two training arcs</h2>
-    <div class="grid grid-2">{belts.map((belt) => <BeltPathCard belt={belt} href={withBase(`/learn/${belt.id}/`)} />)}</div>
+    <p class="eyebrow">Curriculum scope</p><h2>Start with the first two training arcs</h2>
+    <p><a class="button" href={withBase('/curriculum/')}>View Curriculum</a></p>
+    <div class="grid grid-2">{levels.map((level) => <BeltPathCard belt={level} href={contentHref('learn', level.id)} />)}</div>
   </div></section>
   <section class="section-tight"><div class="container grid grid-2"><SafetyNote /><Disclaimer /></div></section>
 </BaseLayout>
+<style>.lead { max-width: 900px; font-size: 1.2rem; }</style>

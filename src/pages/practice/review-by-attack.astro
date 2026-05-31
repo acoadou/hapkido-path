@@ -2,9 +2,9 @@
 import ContentLayout from '@layouts/ContentLayout.astro';
 import TechniqueCard from '@components/TechniqueCard.astro';
 import { getCollection } from 'astro:content';
-import { withBase } from '@utils/paths';
-const techniques = (await getCollection('techniques')).sort((a, b) => a.data.attackType.localeCompare(b.data.attackType));
+import { contentHref } from '@utils/paths';
+const techniques = (await getCollection('techniques')).sort((a, b) => (a.data.attack ?? a.data.attackType ?? '').localeCompare(b.data.attack ?? b.data.attackType ?? ''));
 ---
-<ContentLayout title="Review by Attack" eyebrow="Practice" description="Review sample techniques by attack type or training situation.">
-  <div class="grid grid-2">{techniques.map((technique) => <TechniqueCard technique={technique} href={withBase(`/techniques/${technique.id}/`)} />)}</div>
+<ContentLayout title="Review by Attack" eyebrow="Practice" description="Review sample techniques by attack type or training situation." breadcrumbs={[{ label: 'Practice', href: '/practice/' }, { label: 'Review by Attack' }]}>
+  <div class="grid grid-2">{techniques.map((technique) => <TechniqueCard technique={technique} href={contentHref('techniques', technique.id)} />)}</div>
 </ContentLayout>

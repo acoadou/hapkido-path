@@ -1,0 +1,24 @@
+---
+import { withBase } from '@utils/paths';
+interface Crumb { label: string; href?: string; }
+interface Props { items: Crumb[]; }
+const { items } = Astro.props;
+---
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href={withBase('/')}>Home</a></li>
+    {items.map((item, index) => (
+      <li aria-current={index === items.length - 1 ? 'page' : undefined}>
+        {item.href && index !== items.length - 1 ? <a href={withBase(item.href)}>{item.label}</a> : <span>{item.label}</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+<style>
+  .breadcrumbs { margin-bottom: 1rem; color: var(--color-muted); font-size: 0.9rem; }
+  .breadcrumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0; padding: 0; }
+  .breadcrumbs li { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .breadcrumbs li + li::before { content: '›'; color: var(--color-muted); }
+  .breadcrumbs a { color: var(--color-accent); font-weight: 800; text-decoration: none; }
+  .breadcrumbs a:hover { text-decoration: underline; }
+</style>

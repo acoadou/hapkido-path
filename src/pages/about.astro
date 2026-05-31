@@ -3,14 +3,21 @@ import ContentLayout from '@layouts/ContentLayout.astro';
 import Disclaimer from '@components/Disclaimer.astro';
 import SafetyNote from '@components/SafetyNote.astro';
 ---
-<ContentLayout title="About" eyebrow="Project notes" description="What The Hapkido Path is, what it is not, and how the content is organized.">
-  <h2>What this site is</h2>
-  <p>The Hapkido Path is a public static study guide that combines a guided learning path, a technical atlas, principles, Korean vocabulary, practice tools, and source notes.</p>
-  <h2>What this site is not</h2>
-  <p>It is not an official curriculum, certification system, replacement for in-person instruction, or claim that one school’s terminology applies everywhere.</p>
-  <h2>How the content is organized</h2>
-  <p>Belt pages organize practice in sequence. Technique pages preserve technical notes. Principle pages connect recurring mechanics across techniques. Korean and practice pages support review.</p>
+<ContentLayout title="About" eyebrow="Scope and purpose" description="What Hapkido Path is, who it is for, and how the content should be used." breadcrumbs={[{ label: 'About' }]}>
+  <h2>What is this site?</h2>
+  <p>This site is a structured Hapkido learning path and reference.</p>
+  <p>It follows the names and progression used in my school where available, but it is not an official curriculum. Hapkido terminology, sequencing, and technique details vary across schools and federations.</p>
+
+  <h2>Who is it for?</h2>
+  <p>It is primarily built for my own study, but it is written in a way that can be shared with instructors or other students. It avoids private training journal content.</p>
+
+  <h2>Is it official?</h2>
+  <p>No. The technique names primarily follow the names used by my school. Where possible, I reserve space for references to Marc Tedeschi's Hapkido material or other sources, but I do not assume equivalence unless verified.</p>
+
+  <h2>How should it be used?</h2>
+  <p>The goal is to organize study notes, technique references, principles, and practice material in a clear way. Belt pages provide the path, lesson pages guide review, and technique pages hold the detailed mechanics.</p>
+
+  <h2>What are the safety limitations?</h2>
+  <p>The pages are detailed because they are intended to support self-study and review. They are not a substitute for qualified instruction, especially for joint locks, takedowns, pins, throws, or strikes.</p>
   <div class="grid grid-2"><Disclaimer /><SafetyNote /></div>
-  <h2>Contribution guidelines placeholder</h2>
-  <p>Future contribution notes should ask contributors to write in English, use original wording, cite sources, avoid copying copyrighted curriculum, and mark school-specific variations clearly.</p>
 </ContentLayout>

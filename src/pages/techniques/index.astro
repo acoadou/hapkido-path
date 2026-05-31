@@ -2,21 +2,21 @@
 import ContentLayout from '@layouts/ContentLayout.astro';
 import TechniqueCard from '@components/TechniqueCard.astro';
 import { getCollection } from 'astro:content';
-import { withBase } from '@utils/paths';
+import { contentHref } from '@utils/paths';
 const techniques = (await getCollection('techniques')).sort((a, b) => a.data.order - b.data.order);
-const categories = ['Breakfalls & Rolls', 'Breakaways', 'Straight Hands', 'Kibon Sool', 'Sleeve Grabs', 'Collar Grabs', 'Punch Defenses', 'Kicks', 'Pins & Controls'];
+const categories = ['breakfalls-rolls', 'breakaways', 'straight-hands', 'sleeve-grabs', 'collar-grabs', 'punch-defenses', 'kicks', 'pins-controls'];
 ---
-<ContentLayout title="Techniques" eyebrow="Technical atlas" description="Browse sample technique pages by category, belt level, attack type, and principle.">
+<ContentLayout title="Techniques" eyebrow="Technical atlas" description="Browse detailed reference pages by category, belt level, attack type, and principle." breadcrumbs={[{ label: 'Techniques' }]}>
   <section class="filter-panel" aria-label="Future technique filters">
     <h2>Filters placeholder</h2>
     <div class="grid grid-2">
       <label>Filter by belt <select><option>All belt levels</option></select></label>
-      <label>Filter by category <select><option>All categories</option>{categories.map((category) => <option>{category}</option>)}</select></label>
+      <label>Filter by category <select><option>All categories</option>{categories.map((category) => <option>{category.replace(/-/g, ' ')}</option>)}</select></label>
       <label>Filter by principle <select><option>All principles</option></select></label>
       <label>Filter by attack type <select><option>All attack types</option></select></label>
     </div>
   </section>
-  <div class="grid grid-2 technique-list">{techniques.map((technique) => <TechniqueCard technique={technique} href={withBase(`/techniques/${technique.id}/`)} />)}</div>
+  <div class="grid grid-2 technique-list">{techniques.map((technique) => <TechniqueCard technique={technique} href={contentHref('techniques', technique.id)} />)}</div>
 </ContentLayout>
 <style>
   .filter-panel { margin-bottom: 1.5rem; padding: 1rem; border-radius: var(--radius); background: var(--color-bg); border: 1px dashed var(--color-border); }
