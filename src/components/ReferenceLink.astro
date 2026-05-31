@@ -20,7 +20,8 @@ function slugFromReference(reference: string, referenceKind: ReferenceKind) {
   const sectionPrefix = collection ? `${collection}/` : '';
   const withoutSection = sectionPrefix && clean.startsWith(sectionPrefix) ? clean.slice(sectionPrefix.length) : clean;
   const normalized = withoutSection.replace(/^\/+|\/+$/g, '');
-  return normalized.includes('/') ? normalized : slugifyLabel(normalized);
+  const parts = normalized.split('/').filter(Boolean);
+  return parts.length > 0 ? slugifyLabel(parts[parts.length - 1]) : '';
 }
 
 async function titleForReference(reference: string, referenceKind: ReferenceKind) {
