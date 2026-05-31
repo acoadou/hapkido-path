@@ -23,10 +23,11 @@ jobs:
 
       - name: Install, build, and upload your site
         uses: withastro/action@v6
+        with:
+          package-manager: npm
         # with:
         #   path: . # The root location of the Astro project inside this repository.
         #   node-version: 24 # Optional; withastro/action defaults to a supported Node version.
-        #   package-manager: npm # Optional; auto-detected when a lockfile is present.
 
   deploy:
     needs: build
