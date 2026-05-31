@@ -1,0 +1,28 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Tag from '@components/Tag.astro';
+interface Props { entry: any; }
+const { entry } = Astro.props;
+---
+<BaseLayout title={entry.data.title} description={entry.data.summary}>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Principle</p>
+      <h1>{entry.data.title}</h1>
+      <p class="muted intro">{entry.data.summary}</p>
+      <div class="grid grid-2 page-grid">
+        <article class="content-panel"><slot /></article>
+        <aside class="card">
+          <h2>Related techniques</h2>
+          <div class="tags">{entry.data.relatedTechniques.map((technique) => <Tag label={technique} />)}</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .intro { max-width: 760px; font-size: 1.15rem; }
+  .page-grid { align-items: start; grid-template-columns: minmax(0, 1.5fr) minmax(250px, 0.8fr); }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  @media (max-width: 820px) { .page-grid { grid-template-columns: 1fr; } }
+</style>

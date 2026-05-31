@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">The Hapkido Path placeholder icon</title>
+  <rect width="128" height="128" rx="24" fill="#172033"/>
+  <path d="M32 72c14-30 40-44 68-28" fill="none" stroke="#f8f7f2" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="35" cy="74" r="7" fill="#8b2f2f"/>
+</svg>

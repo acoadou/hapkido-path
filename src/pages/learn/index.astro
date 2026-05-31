@@ -1,0 +1,10 @@
+---
+import ContentLayout from '@layouts/ContentLayout.astro';
+import BeltPathCard from '@components/BeltPathCard.astro';
+import { getCollection } from 'astro:content';
+import { withBase } from '@utils/paths';
+const belts = (await getCollection('belts')).sort((a, b) => a.data.order - b.data.order);
+---
+<ContentLayout title="Learn" eyebrow="Learning path" description="Follow the belt-based progression in order, then return to individual techniques and principles for review.">
+  <div class="grid grid-2">{belts.map((belt) => <BeltPathCard belt={belt} href={withBase(`/learn/${belt.data.slug}/`)} />)}</div>
+</ContentLayout>

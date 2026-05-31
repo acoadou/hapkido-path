@@ -1,0 +1,15 @@
+---
+import ContentLayout from '@layouts/ContentLayout.astro';
+import Card from '@components/Card.astro';
+import { withBase } from '@utils/paths';
+const links = [
+  ['Review by Belt', '/practice/review-by-belt/', 'Return to each rank path and its checklist.'],
+  ['Review by Attack', '/practice/review-by-attack/', 'Group techniques by the kind of attack or grip.'],
+  ['Review by Principle', '/practice/review-by-principle/', 'Study recurring mechanics across techniques.'],
+  ['Exam Checklists', '/practice/exam-checklists/', 'Use simple readiness checklists for sample ranks.'],
+  ['Flashcards', '/practice/flashcards/', 'Placeholder structure for later interactive review.']
+];
+---
+<ContentLayout title="Practice" eyebrow="Review tools" description="Static practice supports for planning review sessions, preparing for exams, and revisiting core vocabulary.">
+  <div class="grid grid-2">{links.map(([title, href, text]) => <Card title={title} href={withBase(href)}><p>{text}</p></Card>)}</div>
+</ContentLayout>

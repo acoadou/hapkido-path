@@ -1,0 +1,11 @@
+---
+import ContentLayout from '@layouts/ContentLayout.astro';
+import Card from '@components/Card.astro';
+import { getCollection } from 'astro:content';
+import { withBase } from '@utils/paths';
+const pages = (await getCollection('korean')).sort((a, b) => a.data.order - b.data.order);
+---
+<ContentLayout title="Korean" eyebrow="Language reference" description="Vocabulary, commands, counting, and etiquette notes for training context.">
+  <p class="callout">Terminology may vary by school and romanization system. Use this section as a study aid, not as a universal standard.</p>
+  <div class="grid grid-2">{pages.map((page) => <Card title={page.data.title} href={withBase(`/korean/${page.data.slug}/`)}><p>{page.data.summary}</p></Card>)}</div>
+</ContentLayout>

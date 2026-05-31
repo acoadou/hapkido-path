@@ -1,0 +1,14 @@
+---
+interface Props { principle: { data: { title: string; summary: string; relatedTechniques: string[]; slug: string; } }; href: string; }
+const { principle, href } = Astro.props;
+---
+<article class="card principle-card">
+  <p class="eyebrow">Principle</p>
+  <h3><a href={href}>{principle.data.title}</a></h3>
+  <p>{principle.data.summary}</p>
+  <p class="muted">{principle.data.relatedTechniques.length} related techniques</p>
+</article>
+<style>
+  h3 a { color: var(--color-text); text-decoration: none; }
+  h3, p { margin-top: 0; }
+</style>

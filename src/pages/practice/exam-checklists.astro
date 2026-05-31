@@ -1,0 +1,9 @@
+---
+import ContentLayout from '@layouts/ContentLayout.astro';
+import Checklist from '@components/Checklist.astro';
+import { getCollection } from 'astro:content';
+const belts = (await getCollection('belts')).sort((a, b) => a.data.order - b.data.order);
+---
+<ContentLayout title="Exam Checklists" eyebrow="Practice" description="Sample readiness checklists for the first two learning arcs.">
+  <div class="grid grid-2">{belts.map((belt) => <Checklist title={belt.data.title} items={belt.data.examChecklist} />)}</div>
+</ContentLayout>

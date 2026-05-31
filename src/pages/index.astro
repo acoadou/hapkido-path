@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import Card from '@components/Card.astro';
+import BeltPathCard from '@components/BeltPathCard.astro';
+import Disclaimer from '@components/Disclaimer.astro';
+import SafetyNote from '@components/SafetyNote.astro';
+import { getCollection } from 'astro:content';
+import { withBase } from '@utils/paths';
+const belts = (await getCollection('belts')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout title="The Hapkido Path">
+  <Hero title="The Hapkido Path" subtitle="A guided learning path and technical reference for Hapkido practice." primaryHref={withBase('/learn/')} primaryLabel="Start Learning" secondaryHref={withBase('/techniques/')} secondaryLabel="Browse Techniques" />
+  <section class="section-tight"><div class="container grid grid-3">
+    <Card title="Learn in order"><p>Follow a belt-based path with objectives, checklists, principles, and vocabulary.</p></Card>
+    <Card title="Review by principle"><p>Study the mechanics that repeat across many techniques, so practice is not just choreography.</p></Card>
+    <Card title="Explore by technique"><p>Use the technical atlas to review attacks, categories, risk areas, and related notes.</p></Card>
+  </div></section>
+  <section class="section"><div class="container">
+    <p class="eyebrow">Featured beginner path</p><h2>Start with the first two training arcs</h2>
+    <div class="grid grid-2">{belts.map((belt) => <BeltPathCard belt={belt} href={withBase(`/learn/${belt.data.slug}/`)} />)}</div>
+  </div></section>
+  <section class="section-tight"><div class="container grid grid-2"><SafetyNote /><Disclaimer /></div></section>
+</BaseLayout>
