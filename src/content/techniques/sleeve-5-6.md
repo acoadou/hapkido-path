@@ -25,6 +25,27 @@ lessons:
 relatedTechniques:
   - Sleeve 4
   - Sleeve 1-2
+visuals:
+  base_path: /images/techniques/sleeve-5-6/
+  frames:
+    - id: starting-position
+      file: 01-starting-position.png
+      caption: Starting position — attacker uses a cross grip on the defender's sleeve.
+    - id: outside-block
+      file: 02-outside-block.png
+      caption: Defender makes a large outside-block motion.
+    - id: pull-off-balance
+      file: 03-pull-off-balance.png
+      caption: Defender pulls the attacker off balance while rotating.
+    - id: wrist-capture
+      file: 04-wrist-capture.png
+      caption: Defender captures or covers the attacker's wrist.
+    - id: body-turn
+      file: 05-body-turn.png
+      caption: Defender steps and turns the body to continue the lock.
+    - id: ending-position
+      file: 06-ending-position.png
+      caption: Ending control or takedown position.
 summary: "Sleeve 5-6 is a combined reference for two closely related school variations until their differences are documented clearly."
 order: 16
 ---
@@ -34,7 +55,6 @@ order: 16
 - School name: Sleeve 5-6
 - Tedeschi / Hapkido reference: TODO
 - Alternate names: TODO
-- Source notes: Based on Anthony's school terminology and study notes. Do not assume an external reference mapping until it is verified.
 
 ## Summary
 
@@ -59,7 +79,7 @@ Include these details when class notes are added:
 - Move around the grip instead of pulling straight back.
 - Connect the wrist, elbow, shoulder, and posture into one line of control.
 - Break posture before asking uke to fall or receive a pin.
-- Transition to the ending control used by Anthony's school for Sleeve 5-6.
+- Transition to the ending control used by the current school for Sleeve 5-6.
 
 ## Entry condition
 
@@ -166,17 +186,6 @@ Start from the sleeve grip. Uke gives a realistic but cooperative hold. Nage per
 ## Variations and notes
 
 Use this section for verified class variations, instructor corrections, or differences between Sleeve 5-6 and closely related sleeve techniques. Do not merge variations into the main sequence unless they are truly the same technique.
-
-## Visual reference
-
-TODO: Add original illustration or approved image.
-
-Planned frames:
-1. Starting position.
-2. First movement.
-3. Control established.
-4. Posture break.
-5. Ending position.
 
 ## Related principles
 

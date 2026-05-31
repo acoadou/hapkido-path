@@ -25,6 +25,30 @@ lessons:
 relatedTechniques:
   - Outside Sleeve 1
   - Outside Sleeve 2
+visuals:
+  base_path: /images/techniques/outside-sleeve-3/
+  frames:
+    - id: starting-position
+      file: 01-starting-position.png
+      caption: Starting position — attacker grabs the defender's shoulder or collar from the outside.
+    - id: optional-jaw-strike
+      file: 02-optional-jaw-strike.png
+      caption: Optional upward strike toward the jaw to create looseness.
+    - id: step-off-line
+      file: 03-step-off-line.png
+      caption: Defender slips the left foot forward-left to move off centerline.
+    - id: lift-and-pass-under
+      file: 04-lift-and-pass-under.png
+      caption: Defender lifts the arm and passes underneath.
+    - id: arm-bar
+      file: 05-arm-bar.png
+      caption: Attacker's arm is extended into an arm bar across the defender's line.
+    - id: takedown
+      file: 06-takedown.png
+      caption: Defender turns and drops to take the attacker down.
+    - id: ending-position
+      file: 07-ending-position.png
+      caption: Ending control after the takedown.
 summary: "The third outside sleeve reference is reserved for the next verified school variation in the outside sleeve family."
 order: 12
 ---
@@ -34,7 +58,6 @@ order: 12
 - School name: Outside Sleeve 3
 - Tedeschi / Hapkido reference: TODO
 - Alternate names: TODO
-- Source notes: Based on Anthony's school terminology and study notes. Do not assume an external reference mapping until it is verified.
 
 ## Summary
 
@@ -59,7 +82,7 @@ Include these details when class notes are added:
 - Move around the grip instead of pulling straight back.
 - Connect the wrist, elbow, shoulder, and posture into one line of control.
 - Break posture before asking uke to fall or receive a pin.
-- Transition to the ending control used by Anthony's school for Outside Sleeve 3.
+- Transition to the ending control used by the current school for Outside Sleeve 3.
 
 ## Entry condition
 
@@ -166,17 +189,6 @@ Start from the sleeve grip. Uke gives a realistic but cooperative hold. Nage per
 ## Variations and notes
 
 Use this section for verified class variations, instructor corrections, or differences between Outside Sleeve 3 and closely related sleeve techniques. Do not merge variations into the main sequence unless they are truly the same technique.
-
-## Visual reference
-
-TODO: Add original illustration or approved image.
-
-Planned frames:
-1. Starting position.
-2. First movement.
-3. Control established.
-4. Posture break.
-5. Ending position.
 
 ## Related principles
 

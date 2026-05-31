@@ -25,6 +25,27 @@ lessons:
 relatedTechniques:
   - Sleeve 3
   - Sleeve 5-6
+visuals:
+  base_path: /images/techniques/sleeve-4/
+  frames:
+    - id: starting-position
+      file: 01-starting-position.png
+      caption: Starting position — attacker grabs the defender's shoulder or upper sleeve with a cross grab.
+    - id: left-hand-control
+      file: 02-left-hand-control.png
+      caption: Defender brings the left hand to the grabbing hand.
+    - id: wrist-capture
+      file: 03-wrist-capture.png
+      caption: Defender captures the attacker's wrist.
+    - id: lateral-wrist-lock
+      file: 04-lateral-wrist-lock.png
+      caption: Defender rotates the hand outward into a lateral wrist lock.
+    - id: arm-bar
+      file: 05-arm-bar.png
+      caption: Defender extends the attacker's arm into an arm bar.
+    - id: wrist-hyperflexion-pin
+      file: 06-wrist-hyperflexion-pin.png
+      caption: Ending pin using wrist hyperflexion.
 summary: "Sleeve 4 is a draft reference for a later sleeve-grab variation, ready for class notes, instructor feedback, and verified detail."
 order: 15
 ---
@@ -34,7 +55,6 @@ order: 15
 - School name: Sleeve 4
 - Tedeschi / Hapkido reference: TODO
 - Alternate names: TODO
-- Source notes: Based on Anthony's school terminology and study notes. Do not assume an external reference mapping until it is verified.
 
 ## Summary
 
@@ -59,7 +79,7 @@ Include these details when class notes are added:
 - Move around the grip instead of pulling straight back.
 - Connect the wrist, elbow, shoulder, and posture into one line of control.
 - Break posture before asking uke to fall or receive a pin.
-- Transition to the ending control used by Anthony's school for Sleeve 4.
+- Transition to the ending control used by the current school for Sleeve 4.
 
 ## Entry condition
 
@@ -166,17 +186,6 @@ Start from the sleeve grip. Uke gives a realistic but cooperative hold. Nage per
 ## Variations and notes
 
 Use this section for verified class variations, instructor corrections, or differences between Sleeve 4 and closely related sleeve techniques. Do not merge variations into the main sequence unless they are truly the same technique.
-
-## Visual reference
-
-TODO: Add original illustration or approved image.
-
-Planned frames:
-1. Starting position.
-2. First movement.
-3. Control established.
-4. Posture break.
-5. Ending position.
 
 ## Related principles
 

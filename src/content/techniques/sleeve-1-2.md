@@ -26,6 +26,30 @@ relatedTechniques:
   - Sleeve 3
   - Sleeve 4
   - Outside Sleeve 1
+visuals:
+  base_path: /images/techniques/sleeve-1-2/
+  frames:
+    - id: starting-position
+      file: 01-starting-position.png
+      caption: Starting position — attacker grabs the defender's sleeve near the elbow.
+    - id: outside-circular-motion
+      file: 02-outside-circular-motion.png
+      caption: Defender starts the outside circular motion.
+    - id: hand-capture
+      file: 03-hand-capture.png
+      caption: Defender captures the attacker's hand against the arm.
+    - id: shoulder-line-fix
+      file: 04-shoulder-line-fix.png
+      caption: Defender fixes the hand near the left shoulder line.
+    - id: elbow-fold
+      file: 05-elbow-fold.png
+      caption: Defender drives forward to fold the attacker's elbow.
+    - id: wrist-rotation
+      file: 06-wrist-rotation.png
+      caption: Defender rotates the wrist upward.
+    - id: ending-position
+      file: 07-ending-position.png
+      caption: Ending position under the wrist lock.
 summary: "Sleeve 1-2 is a paired sleeve-grab reference for studying the first two school variations as one review unit until the differences are fully documented."
 order: 13
 ---
@@ -35,7 +59,6 @@ order: 13
 - School name: Sleeve 1-2
 - Tedeschi / Hapkido reference: TODO
 - Alternate names: TODO
-- Source notes: Based on Anthony's school terminology and study notes. Do not assume an external reference mapping until it is verified.
 
 ## Summary
 
@@ -60,7 +83,7 @@ Include these details when class notes are added:
 - Move around the grip instead of pulling straight back.
 - Connect the wrist, elbow, shoulder, and posture into one line of control.
 - Break posture before asking uke to fall or receive a pin.
-- Transition to the ending control used by Anthony's school for Sleeve 1-2.
+- Transition to the ending control used by the current school for Sleeve 1-2.
 
 ## Entry condition
 
@@ -167,17 +190,6 @@ Start from the sleeve grip. Uke gives a realistic but cooperative hold. Nage per
 ## Variations and notes
 
 Use this section for verified class variations, instructor corrections, or differences between Sleeve 1-2 and closely related sleeve techniques. Do not merge variations into the main sequence unless they are truly the same technique.
-
-## Visual reference
-
-TODO: Add original illustration or approved image.
-
-Planned frames:
-1. Starting position.
-2. First movement.
-3. Control established.
-4. Posture break.
-5. Ending position.
 
 ## Related principles
 

@@ -5,6 +5,7 @@ import Tag from '@components/Tag.astro';
 import SafetyNote from '@components/SafetyNote.astro';
 import ReferenceList from '@components/ReferenceList.astro';
 import ReferenceLink from '@components/ReferenceLink.astro';
+import VisualSequence from '@components/VisualSequence.astro';
 interface Props { entry: any; }
 const { entry } = Astro.props;
 const data = entry.data;
@@ -27,7 +28,7 @@ const categoryLabel = data.category.replace(/-/g, ' ');
         {risks.map((risk) => <li><Tag label={`Risk: ${risk}`} /></li>)}
       </ul>
       <div class="grid grid-2 page-grid">
-        <article class="content-panel"><slot /></article>
+        <article class="content-panel"><slot /><VisualSequence visuals={data.visuals} /></article>
         <aside class="side-stack">
           <SafetyNote />
           <section class="card">
