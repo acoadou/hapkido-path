@@ -16,6 +16,6 @@ const crumbs = [{ label: 'Learn', href: '/learn/' }];
 if (parts.length > 1) crumbs.push({ label: labelFromSlug(parts[0]), href: `/learn/${parts[0]}/` });
 crumbs.push({ label: data.title });
 ---
-<ContentLayout title={data.title} eyebrow={data.type === 'belt-overview' ? 'Learning level' : 'Lesson'} description={data.summary} breadcrumbs={crumbs}>
+<ContentLayout title={data.title} eyebrow={data.type === 'belt-overview' ? 'Learning level' : 'Lesson'} description={data.summary} breadcrumbs={crumbs} status={data.status}>
   <Content />
 </ContentLayout>

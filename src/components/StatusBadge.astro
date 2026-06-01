@@ -1,0 +1,17 @@
+---
+interface Props {
+  status?: string;
+}
+
+const { status } = Astro.props;
+const labels: Record<string, string> = {
+  placeholder: 'Placeholder',
+  draft: 'Draft',
+  'needs-review': 'Needs review',
+  verified: 'Verified',
+  illustrated: 'Illustrated'
+};
+const normalizedStatus = status?.trim().toLowerCase();
+const label = normalizedStatus ? labels[normalizedStatus] : undefined;
+---
+{label && <span class={`status-badge status-badge--${normalizedStatus}`}>{label}</span>}

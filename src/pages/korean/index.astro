@@ -6,7 +6,7 @@ import { contentHref } from '@utils/paths';
 const pages = (await getCollection('korean')).sort((a, b) => a.data.order - b.data.order);
 ---
 <ContentLayout title="Korean" eyebrow="Language reference" description="Vocabulary, commands, counting, and etiquette notes for training context." breadcrumbs={[{ label: 'Korean' }]}>
-  <p class="callout">Korean is a support section, not a full language course. Technique page titles remain the school names used in class unless verified terminology is added later.</p>
+  <p class="callout">Korean is a support section, not a full language course. This section is scaffolded and will grow as vocabulary is verified in training context.</p>
   <div class="grid grid-2">{pages.map((page) => <Card title={page.data.title} href={contentHref('korean', page.id)}><p>{page.data.summary}</p></Card>)}</div>
   <h2>Planned support topics</h2>
   <ul>

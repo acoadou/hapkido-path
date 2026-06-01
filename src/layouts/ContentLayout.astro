@@ -1,18 +1,23 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
-interface Props { title: string; description?: string; eyebrow?: string; breadcrumbs?: { label: string; href?: string }[]; }
-const { title, description, eyebrow, breadcrumbs = [] } = Astro.props;
+import StatusBadge from '@components/StatusBadge.astro';
+interface Props { title: string; description?: string; eyebrow?: string; breadcrumbs?: { label: string; href?: string }[]; status?: string; }
+const { title, description, eyebrow, breadcrumbs = [], status } = Astro.props;
 ---
 <BaseLayout title={title} description={description}>
   <section class="section">
     <div class="container">
       {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
       {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      <div class="status-row"><StatusBadge status={status} /></div>
       <h1>{title}</h1>
       {description && <p class="muted intro">{description}</p>}
       <div class="content-panel"><slot /></div>
     </div>
   </section>
 </BaseLayout>
-<style>.intro { max-width: 760px; font-size: 1.15rem; }</style>
+<style>
+  .intro { max-width: 760px; font-size: 1.15rem; }
+  .status-row { margin-bottom: 0.45rem; }
+</style>
