@@ -1,60 +1,18 @@
 ---
-import { existsSync } from 'node:fs';
-import { join, normalize, sep } from 'node:path';
 import { withBase } from '@utils/paths';
-
-interface VisualFrame {
-  id: string;
-  file: string;
-  caption: string;
-  alt?: string;
-}
-
-interface VisualGroup {
-  title?: string;
-  frames: VisualFrame[];
-}
-
-interface Visuals {
-  base_path: string;
-  frames?: VisualFrame[];
-  groups?: VisualGroup[];
-}
+import { publicVisualFileExists, visualGroups, type Visuals } from '@utils/visuals';
 
 interface Props {
   visuals?: Visuals;
 }
 
 const { visuals } = Astro.props;
-const supportedExtensions = new Set(['.png', '.jpg', '.jpeg']);
-const publicRoot = join(process.cwd(), 'public');
-
-function extensionFor(file: string) {
-  const match = file.toLowerCase().match(/\.[^.\/]+$/);
-  return match?.[0] ?? '';
-}
-
-function isSafePublicPath(path: string) {
-  const normalized = normalize(path).replace(/^([/\\])+/, '');
-  return normalized && !normalized.split(sep).includes('..');
-}
-
-function publicFileExists(basePath: string, file: string) {
-  const relativePath = `${basePath.replace(/^\/+/, '').replace(/\/+$/, '')}/${file}`;
-  if (!supportedExtensions.has(extensionFor(file)) || !isSafePublicPath(relativePath)) return false;
-  const absolutePath = join(publicRoot, relativePath);
-  return absolutePath.startsWith(publicRoot) && existsSync(absolutePath);
-}
 
 function imageHref(basePath: string, file: string) {
   return withBase(`${basePath.replace(/\/+$/, '')}/${file}`);
 }
 
-const groups: VisualGroup[] = visuals?.groups?.length
-  ? visuals.groups
-  : visuals?.frames?.length
-    ? [{ frames: visuals.frames }]
-    : [];
+const groups = visualGroups(visuals);
 ---
 {visuals && groups.length > 0 && (
   <section class="visual-sequence" aria-labelledby="visual-reference-heading">
@@ -67,7 +25,7 @@ const groups: VisualGroup[] = visuals?.groups?.length
         {group.title && <h3>{group.title}</h3>}
         <div class="visual-sequence__grid">
           {group.frames.map((frame, index) => {
-            const hasImage = publicFileExists(visuals.base_path, frame.file);
+            const hasImage = publicVisualFileExists(visuals.base_path, frame.file);
             const src = imageHref(visuals.base_path, frame.file);
             const alt = frame.alt ?? frame.caption;
             return (

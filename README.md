@@ -132,4 +132,4 @@ public/images/techniques/sleeve-4/
 public/images/techniques/sleeve-5-6/
 ```
 
-When the declared image file exists, the technique page displays it. When it is missing, the page displays a clean `Illustration pending` placeholder with the expected filename and the frame caption. Authors do not need to edit the Markdown body when adding images later.
+When the declared image file exists, the technique page displays it. When it is missing, the page displays a clean `Illustration pending` placeholder with the expected filename and the frame caption. No Markdown body edit is needed when adding images later.

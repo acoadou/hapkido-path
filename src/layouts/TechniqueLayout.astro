@@ -3,6 +3,8 @@ import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Tag from '@components/Tag.astro';
 import VisualSequence from '@components/VisualSequence.astro';
+import StatusBadge from '@components/StatusBadge.astro';
+import IllustrationStatus from '@components/IllustrationStatus.astro';
 interface Props { entry: any; }
 const { entry } = Astro.props;
 const data = entry.data;
@@ -16,12 +18,14 @@ const categoryLabel = data.category.replace(/-/g, ' ');
     <div class="container">
       <Breadcrumbs items={[{ label: 'Techniques', href: '/techniques/' }, { label: categoryLabel }, { label: data.title }]} />
       <p class="eyebrow">{categoryLabel}</p>
+      <div class="status-row"><StatusBadge status={data.status} /></div>
       <h1>{data.title}</h1>
       {data.summary && <p class="muted intro">{data.summary}</p>}
       <ul class="meta-list">
         <li><Tag label={belt} /></li>
         <li><Tag label={attack} /></li>
         {risks.map((risk) => <li><Tag label={`Risk: ${risk}`} /></li>)}
+        {data.visuals && <li><IllustrationStatus visuals={data.visuals} /></li>}
       </ul>
       <article class="content-panel technique-content"><slot /><VisualSequence visuals={data.visuals} /></article>
     </div>
@@ -29,5 +33,6 @@ const categoryLabel = data.category.replace(/-/g, ' ');
 </BaseLayout>
 <style>
   .intro { max-width: 760px; font-size: 1.15rem; }
+  .status-row { margin-bottom: 0.45rem; }
   .technique-content { margin-top: 1.5rem; }
 </style>

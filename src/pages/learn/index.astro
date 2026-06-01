@@ -7,10 +7,18 @@ import { contentHref, withBase } from '@utils/paths';
 const levels = (await getCollection('learn')).filter((entry) => entry.data.type === 'belt-overview').sort((a, b) => a.data.order - b.data.order);
 ---
 <ContentLayout title="Learn" eyebrow="Learning path" description="Follow the active belt-based study arcs, then return to technique and principle pages for detailed review." breadcrumbs={[{ label: 'Learn' }]}>
-  <p class="callout">Only White to Yellow and Yellow to Green are scaffolded now. Future levels are noted on the Curriculum page but are not built out yet.</p>
+  <p class="callout">This section is scaffolded and will grow as techniques are documented. Current focus: White→Yellow and Yellow→Green. Future levels are noted on the Curriculum page but are not built out yet.</p>
   <p><a class="button" href={withBase('/curriculum/')}>View Curriculum Map</a></p>
   <div class="grid grid-2">{levels.map((level) => <BeltPathCard belt={level} href={contentHref('learn', level.id)} />)}</div>
   <h2>How to use this section</h2>
+  <ol>
+    <li>Start with the learning path.</li>
+    <li>Open lesson pages for the study sequence.</li>
+    <li>Use technique pages for detailed mechanics.</li>
+    <li>Use principles pages to understand recurring ideas.</li>
+    <li>Use practice pages for review and drills.</li>
+    <li>Treat all content as study notes, not official instruction.</li>
+  </ol>
   <div class="grid grid-2">
     <Card title="Lessons guide study"><p>Lesson pages explain what to review and link to the detailed technique references.</p></Card>
     <Card title="Technique pages hold depth"><p>Belt pages stay lightweight. Detailed mechanics, safety notes, and reference fields live in the technique atlas.</p></Card>

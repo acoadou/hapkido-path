@@ -15,6 +15,19 @@ const levels = (await getCollection('learn')).filter((entry) => entry.data.type 
     <p class="lead">This site combines a beginner learning path organized by belt-like levels, a detailed technique atlas, practical principles, practice tools, Korean vocabulary notes, and source references.</p>
     <p class="callout">The current scope covers White to Yellow and Yellow to Green only.</p>
   </div></section>
+  <section class="section-tight"><div class="container">
+    <div class="callout">
+      <h2>How to use this site</h2>
+      <ol>
+        <li>Start with the learning path.</li>
+        <li>Open lesson pages for the study sequence.</li>
+        <li>Use technique pages for detailed mechanics.</li>
+        <li>Use principles pages to understand recurring ideas.</li>
+        <li>Use practice pages for review and drills.</li>
+        <li>Treat all content as study notes, not official instruction.</li>
+      </ol>
+    </div>
+  </div></section>
   <section class="section-tight"><div class="container grid grid-3">
     <Card title="Start learning" href={withBase('/learn/')}><p>Follow the active learning levels and lesson sequence.</p></Card>
     <Card title="Browse techniques" href={withBase('/techniques/')}><p>Use detailed technique pages for technical review.</p></Card>

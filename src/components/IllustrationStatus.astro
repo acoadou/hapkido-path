@@ -1,0 +1,15 @@
+---
+import { visualAvailability, type Visuals } from '@utils/visuals';
+
+interface Props {
+  visuals?: Visuals;
+}
+
+const status = visualAvailability(Astro.props.visuals);
+const statusClass = status.total > 0 && status.available === status.total
+  ? 'illustration-status--complete'
+  : status.available > 0
+    ? 'illustration-status--partial'
+    : 'illustration-status--pending';
+---
+<span class={`illustration-status ${statusClass}`}>{status.label}</span>
