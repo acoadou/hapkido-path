@@ -1,26 +1,36 @@
 ---
-title: Lesson 2 — Outside Sleeve
+title: Lesson Title
 type: lesson
 belt: yellow-to-green
-lesson_number: 2
+order: 1
+lesson_number: 1
 status: placeholder
-techniques:
-  - /techniques/outside-sleeve-1/
-principles:
-  - circular-motion
+summary: ""
+techniques: []
+principles: []
 estimated_time: 30-45 minutes
+objectives: []
+checklist: []
 ---
 
-## Purpose
+## Goal
 
-What this lesson teaches.
+## Prerequisites
 
-## Study sequence
+## Warm-up
 
-1. Review the starting condition.
-2. Practice the movement slowly.
-3. Connect to related principle pages.
+## Lesson flow
 
-## Technique links
+## Techniques introduced
 
-- [Technique Name](/techniques/technique-slug/)
+## Principles introduced
+
+## Solo review
+
+## Partner drill
+
+## Safety focus
+
+## Review questions
+
+## Next lesson
