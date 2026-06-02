@@ -1,11 +1,17 @@
 ---
 title: "Korean Basics"
-summary: "Counting, common commands, body parts, directions, and rank terms used in training."
+summary: "Counting, common commands, dojang vocabulary, body parts, directions, and rank terms used in training."
 order: 10
 status: "draft"
 ---
 
-These notes collect common Korean words students may hear around Hapkido practice. Romanization and pronunciation can vary, so treat this as a draft reference to confirm with your instructor.
+These notes collect common Korean words students may hear around Hapkido practice. Romanization, pronunciation, and class usage can vary by school, so treat this as a draft reference to confirm with your instructor rather than a full language course.
+
+## How to Use This Page
+
+- Use the Korean and romanization columns for recognition during class, not as a substitute for instructor pronunciation.
+- Prefer your school's terminology when it differs from this page.
+- Keep etiquette and title usage local: bowing routines, rank address, and formality expectations can vary widely.
 
 ## Counting
 
@@ -58,6 +64,19 @@ Sino-Korean numbers are often used for dates, money, minutes, and many formal co
 | 다시 | dasi | Again | Repeat the movement or try again. | Draft; confirm local usage. |
 | 천천히 | cheoncheonhi | Slowly | Slow down for control and safety. | Draft; confirm local usage. |
 
+## Dojang and Hapkido Terms
+
+| Term | Meaning | Training context | Verification status |
+| --- | --- | --- | --- |
+| dojang | Training hall. | The place where practice happens. | Common English romanization; confirm school spelling. |
+| dobok | Training uniform. | Uniform expectations vary by school and rank. | Common English romanization; confirm school spelling. |
+| sabumnim | Instructor or teacher title. | Use only if this is your school's preferred form of address. | Title usage varies. |
+| geup | Color-belt grade. | Often used for ranks before black belt. | Confirm local rank terminology. |
+| dan | Black-belt degree. | Often used for black-belt levels. | Confirm local rank terminology. |
+| hap | Harmony or coordination. | One element often used to explain the name Hapkido. | Meaning can be interpreted broadly. |
+| ki | Energy, spirit, or internal power depending on context. | One element often used to explain the name Hapkido. | Meaning can be interpreted broadly. |
+| do | Way or path. | One element often used to explain the name Hapkido. | Meaning can be interpreted broadly. |
+
 ## Basic Body Parts
 
 | English | Korean | Romanization | Notes |
@@ -99,3 +118,7 @@ Rank and address terminology varies by school, instructor, and level of formalit
 | master | 관장 | gwanjang | Often used for a school owner or head instructor; usage varies. |
 | black belt | 검은띠 | geomeun tti | Literal term for black belt; title expectations vary. |
 | color belt | 유급자 | yugeupja | General term for a color-belt grade holder; confirm school usage. |
+
+## Etiquette Reminders
+
+Etiquette varies by school. Common themes include arriving prepared, bowing respectfully, keeping uniforms clean, communicating clearly with partners, and protecting the training space. Follow your instructor's expectations for when to bow, how to address seniors, where to line up, and how to handle equipment.

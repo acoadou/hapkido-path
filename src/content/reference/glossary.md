@@ -17,6 +17,20 @@ The partner who initiates the grab, strike, push, or other problem the technique
 
 The partner practicing the response. In cooperative training, the defender should still protect the attacker while applying the technique.
 
+## Partner Role Labels
+
+### Uke
+
+The receiving partner in these notes. Uke gives realistic but cooperative feedback, moves safely with pressure, and taps or speaks before a lock becomes unsafe.
+
+### Nage
+
+The applying partner in these notes. Nage studies the entry, control, lock, throw, or pin while protecting uke.
+
+### Tori
+
+Another common label for the applying partner. These notes primarily use nage where the distinction matters, but older or source-derived notes may use tori.
+
 ## Grips and Attacks
 
 ### Grip
