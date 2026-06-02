@@ -105,4 +105,14 @@ const korean = defineCollection({
   })
 });
 
-export const collections = { belts, learn, techniques, principles, korean };
+const reference = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    summary: z.string().default(''),
+    order: z.number().default(0),
+    status: z.string().default('draft')
+  })
+});
+
+export const collections = { belts, learn, techniques, principles, korean, reference };

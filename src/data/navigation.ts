@@ -6,6 +6,7 @@ export const mainNavigation = [
   { label: 'Principles', href: '/principles/' },
   { label: 'Practice', href: '/practice/' },
   { label: 'Korean', href: '/korean/' },
+  { label: 'Reference', href: '/reference/' },
   { label: 'Sources', href: '/sources/' },
   { label: 'About', href: '/about/' }
 ];
