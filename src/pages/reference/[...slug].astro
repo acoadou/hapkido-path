@@ -1,0 +1,20 @@
+---
+import { getCollection, render } from 'astro:content';
+import ContentLayout from '@layouts/ContentLayout.astro';
+import { cleanContentId, labelFromSlug } from '@utils/paths';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('reference');
+  return entries.map((entry) => ({ params: { slug: cleanContentId(entry.id) }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const slug = cleanContentId(entry.id);
+const parts = slug.split('/');
+const breadcrumbs = [{ label: 'Reference', href: '/reference/' }];
+if (parts.length > 1) breadcrumbs.push({ label: labelFromSlug(parts[0]), href: `/reference/${parts[0]}/` });
+breadcrumbs.push({ label: entry.data.title });
+---
+<ContentLayout title={entry.data.title} eyebrow="Reference" description={entry.data.summary} breadcrumbs={breadcrumbs} status={entry.data.status}>
+  <Content />
+</ContentLayout>
