@@ -1,6 +1,6 @@
 # The Hapkido Path
 
-The Hapkido Path is an initial skeleton for a public static website that combines a guided Hapkido learning path, technical reference pages, principles, Korean vocabulary notes, practice tools, and source tracking.
+The Hapkido Path is an initial skeleton for a public static website that combines a guided Hapkido learning path, technical reference pages, principles, practice tools, and source tracking.
 
 This first version is intentionally clean and static. It is built with Astro, TypeScript where useful, Markdown content collections, and GitHub Pages deployment through GitHub Actions.
 
@@ -67,7 +67,7 @@ Content is stored in Astro content collections:
 - `src/content/belts/` for belt progression pages.
 - `src/content/techniques/` for technique atlas pages.
 - `src/content/principles/` for recurring mechanics.
-- `src/content/korean/` for vocabulary, counting, commands, and etiquette.
+- `src/content/reference/` for support material such as Korean basics, glossary terms, etiquette, and training principles.
 
 Each Markdown file begins with frontmatter that must match the schemas in `src/content.config.ts`. Add new entries by copying a nearby file, changing the `title`, `slug`, `order`, and relevant metadata, then adding concise English content below the frontmatter.
 
@@ -76,6 +76,7 @@ Dynamic routes are generated for:
 - `/learn/[slug]/`
 - `/techniques/[slug]/`
 - `/principles/[slug]/`
+- `/reference/[slug]/`
 
 Static section pages live under `src/pages/`.
 

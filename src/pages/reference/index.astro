@@ -5,8 +5,8 @@ import { getCollection } from 'astro:content';
 import { contentHref } from '@utils/paths';
 const pages = (await getCollection('reference')).sort((a, b) => a.data.order - b.data.order);
 ---
-<ContentLayout title="Reference" eyebrow="Study support" description="Compact, school-independent notes for language basics, glossary terms, and general training principles." breadcrumbs={[{ label: 'Reference' }]}>
-  <p class="callout">Reference pages support the technique notes with practical study material. They are general notes and do not replace instructor guidance or school-specific expectations.</p>
+<ContentLayout title="Reference" eyebrow="Study support" description="Compact, school-independent notes for Korean language basics, glossary terms, etiquette, and general training principles." breadcrumbs={[{ label: 'Reference' }]}>
+  <p class="callout">Reference pages support the technique notes with practical study material, including the former Korean study notes. They are general notes and do not replace instructor guidance or school-specific expectations.</p>
   <div class="grid grid-2">
     {pages.map((page) => <Card title={page.data.title} href={contentHref('reference', page.id)}><p>{page.data.summary}</p></Card>)}
   </div>
